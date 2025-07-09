@@ -1,0 +1,31 @@
+import { MongoClient, MongoNetworkError, ObjectId } from "mongodb";
+import dotenv from "dotenv";
+import cors from "cors";
+import express from "express";
+import { promises as fs } from "fs";
+import pg from "pg";
+
+const app = express();
+app.use(cors());
+app.use(express.json());
+let client;
+const dbName = 'store';
+const url = 'mongodb://localhost:27017';
+
+/*****  MongoDB endpoints *****/
+
+// Endpoint to read and send JSON file content
+app.get("/api/all-products", async (req, res) => {
+  try {
+    client = await MongoClient.connect(url);
+    const db = client.db(dbName);
+    const collection = db.collection('products');
+    const products = await collection.find({}).toArray();
+    res.json(products);
+  } catch (err) {
+    console.error("Error:", err);
+    res.status(500).send("Error retrieving all products");
+  } finally {
+    client.close();
+  }
+});
