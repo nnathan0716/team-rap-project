@@ -1,10 +1,8 @@
 import { MongoClient, MongoNetworkError, ObjectId } from "mongodb";
-import dotenv from "dotenv";
 import cors from "cors";
 import express from "express";
-import { promises as fs } from "fs";
-import pg from "pg";
 
+const PORT = 3000;
 const app = express();
 app.use(cors());
 app.use(express.json());
@@ -29,3 +27,7 @@ app.get("/api/all-products", async (req, res) => {
     client.close();
   }
 });
+
+app.listen(PORT, () => {
+    console.log(`Server is running on http://localhost:${PORT}`);
+  });
