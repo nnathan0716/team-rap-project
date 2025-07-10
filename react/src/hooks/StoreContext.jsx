@@ -7,6 +7,7 @@ const StoreContext = createContext(null);
 export const StoreProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [products, setProducts] = useState([]);
+    const [searchProducts, setSearchProducts] = useState([]);
     const [cart, setCart] = useState([]);
 
     useEffect(() => {
@@ -15,17 +16,19 @@ export const StoreProvider = ({ children }) => {
             const res = await fetch("http://localhost:3000/api/all-products");
             const res_json = await res.json();
             setProducts(res_json);
+            setSearchProducts(res_json);
           } catch (err) {
             console.error(err);
           }
         };
     
         fetchProducts();
+        
       }, []);
 
 
     return (
-        <StoreContext.Provider value={{ user, setUser, products, cart, setCart }}>
+        <StoreContext.Provider value={{ user, setUser, products, searchProducts, setSearchProducts, cart, setCart }}>
             {children}
         </StoreContext.Provider>
     );

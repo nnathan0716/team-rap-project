@@ -57,6 +57,7 @@ app.get("/api/by-name/:searchTerm", async (req, res) => {
     const searchResults = await collection
       .find({ name: { $regex: searchTerm, $options: "i" } })
       .toArray();
+
     res.json(searchResults);
   } catch {
     console.error("Error:", err);

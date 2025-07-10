@@ -5,18 +5,15 @@ import NameDialog from "./components/NameDialog";
 import { useStoreInfo } from "./hooks/StoreContext";
 
 function App() {
-  const { user, products, cart, setCart } = useStoreInfo();
-  const [hasSignedIn, setHasSignedIn] = useState(false);
+  const { user, searchProducts, cart, setCart } = useStoreInfo();
 
   return (
     <>
-      {user && <h3>{user}</h3>}
-
-      <h1>Market Masters: Your one stop shop for makeup</h1>
-      {hasSignedIn ? (
+      <h1>Makeup Masters: Your one stop shop for makeup</h1>
+      {user ? (
         <div className="product-flex">
           <div className="product-card">
-            {products.map((product) => (
+            {searchProducts.map((product) => (
               <ProductCard
                 data={product}
                 cart={cart}
@@ -27,7 +24,7 @@ function App() {
           </div>
         </div>
       ) : (
-        <NameDialog setHasSignedIn={setHasSignedIn} />
+        <NameDialog />
       )}
     </>
   );

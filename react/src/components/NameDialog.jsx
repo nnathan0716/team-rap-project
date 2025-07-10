@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useStoreInfo } from "../hooks/StoreContext";
 
-const NameDialog = ({ setHasSignedIn }) => {
+const NameDialog = () => {
   const [inputName, setInputName] = useState("");
   const { setUser, setCart } = useStoreInfo();
 
@@ -25,12 +25,10 @@ const NameDialog = ({ setHasSignedIn }) => {
           `http://localhost:3000/api/get-cart/${inputName}`
         );
         const cartData = await res.json();
-        console.log(cartData);
         setCart(cartData);
       } catch (error) {
         console.error("Error getting cart:", error);
       }
-      setHasSignedIn(true);
     }
   };
 
