@@ -40,15 +40,14 @@
 .read-the-docs {
   color: #888;
 }
-
+/* 
 .product-flex {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between; /* or space-around, center, etc. based on preference */
   gap: 20px;
-}
+} */
 
-.product-card {
+.product-cards {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -57,8 +56,8 @@
 
 /* The actual card component */
 .card {
-  flex: 1 0 250px; /* Grow, don't shrink, base width 250px */
-  max-width: 300px; /* Maximum width for larger screens */
+  flex: 1 0 250px;
+  max-width: 300px;
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
@@ -68,16 +67,16 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.product-card img {
+.product-cards img {
   width: 100%;
-  height: 200px; /* Fixed height for images */
-  object-fit: cover; /* Maintains aspect ratio while filling container */
+  height: 200px;
+  object-fit: cover;
 }
 
 .card img {
   width: 100%;
-  height: 200px; /* Fixed height for images */
-  object-fit: cover; /* Maintains aspect ratio while filling container */
+  height: 200px;
+  object-fit: cover;
 }
 
 /* Link styling */
@@ -91,5 +90,10 @@
 /* Price styling */
 .card-text {
   padding: 0 15px 15px;
-  margin-top: auto; /* Pushes price to bottom */
+  margin-top: auto;
+}
+
+.fallback {
+  /* To have a fallback image */
+  background-image: "../public/no-image.jpg"
 }
