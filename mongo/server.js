@@ -73,31 +73,44 @@ app.get("/api/by-name/:searchTerm", async (req, res) => {
 //     "orders": [{}, {}]
 // }
 
+
 app.post("/api/add-user/:username", async (req, res) => {
-  try {
-    const username = req.params.username;
-    client = await MongoClient.connect(url);
-    const db = client.db(dbName);
-    const collection = db.collection("users");
-    const user = {
-      username: username,
-      firstLogin: new Date().toISOString(),
-      cart: [],
-      orders: [],
-    };
-    await collection.insertOne(user);
-    res.send("Successfully added user");
-  } catch (err) {
-    console.error("Error:", err);
-    res.status(500).send("Error adding user");
-  }
-});
+    try {
+      const username = req.params.username;
+      client = await MongoClient.connect(url);
+      const db = client.db(dbName);
+      const collection = db.collection("users");
+  
+      // Check if the user already exists
+      const existingUser = await collection.findOne({ username: username });
+      
+  
+      if (existingUser) {
+        // console.log("user already exists");
+        res.send("User already exists, no action taken");
+      } else {
+        const user = {
+          username: username,
+          firstLogin: new Date().toISOString(),
+          cart: ['1'],
+          orders: [],
+        };
+        await collection.insertOne(user);
+        console.log("success");
+        res.send("Successfully added user");
+      }
+    } catch (err) {
+      console.error("Error:", err);
+      res.status(500).send("Error adding user");
+    } 
+  });
+  
 
 app.patch("/api/add-order/:username", async (req, res) => {
   try {
     const username = req.params.username;
     const newOrder = req.body;
-    console.log(newOrder);
+    // console.log(newOrder);
 
     client = await MongoClient.connect(url);
     const db = client.db(dbName);
@@ -128,6 +141,7 @@ app.get("/api/get-cart/:username", async (req, res) => {
     const collection = db.collection("users");
 
     const user = await collection.findOne({ username: username });
+    
     const cart = user.cart;
     res.json(cart);
   } catch (err) {
