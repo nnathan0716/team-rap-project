@@ -55,7 +55,7 @@ app.get("/api/by-name/:searchTerm", async (req, res) => {
     const db = client.db(dbName);
     const collection = db.collection("products");
     const searchResults = await collection
-      .find({ name: { $regex: searchTerm, $options: 'i' } })
+      .find({ name: { $regex: searchTerm, $options: "i" } })
       .toArray();
     res.json(searchResults);
   } catch {
@@ -66,12 +66,25 @@ app.get("/api/by-name/:searchTerm", async (req, res) => {
 
 // users collection endpoints
 
-app.post("/api/add-user", async (req, res) => {
+// user = {
+//     "username": "Grace",
+//     "firstLogin": new Date().toISOString(),
+//     "cart": [_id1, _id2],
+//     "orders": [{}, {}]
+// }
+
+app.post("/api/add-user/:username", async (req, res) => {
   try {
-    const user = req.body;
+    const username = req.params.username;
     client = await MongoClient.connect(url);
     const db = client.db(dbName);
     const collection = db.collection("users");
+    const user = {
+      username: username,
+      firstLogin: new Date().toISOString(),
+      cart: [],
+      orders: [],
+    };
     await collection.insertOne(user);
     res.send("Successfully added user");
   } catch (err) {
@@ -80,7 +93,7 @@ app.post("/api/add-user", async (req, res) => {
   }
 });
 
-app.put("/api/add-order/:username", async (req, res) => {
+app.patch("/api/add-order/:username", async (req, res) => {
   try {
     const username = req.params.username;
     const newOrder = req.body;
@@ -100,6 +113,44 @@ app.put("/api/add-order/:username", async (req, res) => {
     } else {
       res.status(404).send("User not found");
     }
+  } catch (err) {
+    console.error("Error:", err);
+    res.status(500).send("Error adding user");
+  }
+});
+
+app.get("/api/get-cart/:username", async (req, res) => {
+  try {
+    const username = req.params.username;
+
+    client = await MongoClient.connect(url);
+    const db = client.db(dbName);
+    const collection = db.collection("users");
+
+    const user = await collection.findOne({ username: username });
+    const cart = user.cart;
+    res.json(cart);
+  } catch (err) {
+    console.error("Error:", err);
+    res.status(500).send("Error adding user");
+  }
+});
+
+app.put("/api/update-cart/:username", async (req, res) => {
+  try {
+    const username = req.params.username;
+    const newCart = req.body;
+
+    client = await MongoClient.connect(url);
+    const db = client.db(dbName);
+    const collection = db.collection("users");
+
+    const update = await collection.updateOne(
+      { username: username },
+      { $set: { cart: newCart } }
+    );
+
+    res.json(newCart);
   } catch (err) {
     console.error("Error:", err);
     res.status(500).send("Error adding user");

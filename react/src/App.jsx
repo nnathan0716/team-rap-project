@@ -8,9 +8,11 @@ import Product from "./components/Product";
 
 function App() {
   const [products, setProducts] = useState([]);
+  const [cart, setCart] = useState([]);
+  const username = "grace";
 
   useEffect(() => {
-    const displayProducts = async () => {
+    const fetchProducts = async () => {
       try {
         const res = await fetch("http://localhost:3000/api/all-products");
         const res_json = await res.json();
@@ -19,8 +21,22 @@ function App() {
         console.error(err);
       }
     };
-    displayProducts();
-  });
+
+    const fetchCart = async () => {
+      try {
+        const res = await fetch(`http://localhost:3000/api/get-cart/${username}`);
+        const cartData = await res.json();
+        setCart(cartData);
+      } catch (err) {
+        console.error(err);
+      }
+    };
+
+    fetchProducts();
+    if (username) {
+      fetchCart();
+    }
+  }, [username]);
 
   return (
     <>
@@ -28,7 +44,7 @@ function App() {
       <div className="product-flex">
         <div className="product-card">
           {products.map((product) => (
-            <ProductCard data={product}></ProductCard>
+            <ProductCard data={product} cart={cart} setCart={setCart} key={product._id}></ProductCard>
           ))}
         </div>
       </div>
