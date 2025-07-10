@@ -1,0 +1,941 @@
+,brand,price,rating,product_type,quantity_sold
+0,rejuva minerals,0.0,,blush,7
+1,marienatie,0.0,,blush,4
+2,lotus cosmetics usa,0.0,,blush,8
+3,glossier,22.0,,blush,5
+4,nyx,20.0,,blush,7
+5,nyx,9.0,,blush,10
+6,nyx,6.0,,blush,3
+7,nyx,6.0,,blush,7
+8,nyx,7.0,,blush,8
+9,nyx,6.5,,blush,5
+10,nyx,10.0,,blush,4
+11,nyx,6.0,,blush,8
+12,nyx,6.0,,blush,8
+13,clinique,34.0,,blush,3
+14,clinique,23.0,,blush,6
+15,clinique,23.0,,blush,5
+16,clinique,18.9,,blush,2
+17,clinique,23.0,,blush,8
+18,clinique,23.0,,blush,6
+19,clinique,,,blush,2
+20,clinique,23.0,,blush,5
+21,dior,32.0,,blush,1
+22,dior,0.0,,blush,10
+23,dior,32.5,,blush,6
+24,dior,32.5,,blush,9
+25,dior,27.5,,blush,1
+26,iman,,,blush,10
+27,smashbox,29.0,,blush,3
+28,smashbox,35.0,,blush,7
+29,smashbox,29.0,,blush,4
+30,,15.99,5.0,blush,9
+31,nyx,12.99,,blush,3
+32,covergirl,13.99,,blush,5
+33,cargo cosmetics,32.0,,blush,3
+34,,28.96,,blush,7
+35,maybelline,14.99,,blush,5
+36,sante,23.49,3.0,blush,9
+37,covergirl,13.99,5.0,blush,7
+38,annabelle,7.99,,blush,2
+39,nyx,7.99,4.0,blush,4
+40,cargo cosmetics,29.0,5.0,blush,9
+41,mineral fusion,32.0,5.0,blush,2
+42,covergirl,8.99,5.0,blush,10
+43,covergirl,8.99,,blush,9
+44,physicians formula,15.99,4.0,blush,10
+45,covergirl,6.99,5.0,blush,5
+46,e.l.f.,9.99,,blush,2
+47,revlon,13.49,5.0,blush,4
+48,maybelline,14.99,5.0,blush,7
+49,physicians formula,15.99,4.0,blush,8
+50,covergirl,6.99,5.0,blush,3
+51,almay,14.49,4.0,blush,1
+52,l'oreal,16.49,4.8,blush,4
+53,physicians formula,15.99,4.7,blush,2
+54,pure anada,12.0,4.0,blush,8
+55,physicians formula,15.49,4.8,blush,4
+56,covergirl,7.99,3.3,blush,2
+57,physicians formula,19.99,4.8,blush,6
+58,e.l.f.,9.99,4.7,blush,6
+59,pure anada,12.0,4.5,blush,10
+60,maybelline,10.29,4.8,blush,4
+61,pure anada,12.0,4.4,blush,6
+62,milani,9.99,4.6,blush,2
+63,milani,7.99,4.7,blush,10
+64,cargo cosmetics,26.0,4.8,blush,2
+65,physicians formula,15.99,5.0,blush,10
+66,stila,51.0,,blush,4
+67,stila,51.0,,blush,8
+68,anna sui,27.0,,blush,7
+69,nyx,9.99,2.0,blush,9
+70,l'oreal,15.99,,blush,8
+71,marcelle,14.99,5.0,blush,5
+72,revlon,13.49,5.0,blush,2
+73,,15.0,2.3,blush,5
+74,physicians formula,8.99,4.0,blush,8
+75,maybelline,11.99,4.5,blush,10
+76,physicians formula,29.99,4.8,blush,9
+77,pacifica,28.0,3.6,blush,9
+78,rejuva minerals,0.0,,blush,1
+79,marienatie,0.0,,blush,9
+80,lotus cosmetics usa,0.0,,blush,7
+81,glossier,22.0,,blush,9
+82,nyx,20.0,,blush,8
+83,nyx,9.0,,blush,1
+84,nyx,6.0,,blush,8
+85,nyx,6.0,,blush,8
+86,nyx,7.0,,blush,3
+87,nyx,6.5,,blush,1
+88,nyx,10.0,,blush,8
+89,nyx,6.0,,blush,3
+90,nyx,6.0,,blush,3
+91,clinique,34.0,,blush,1
+92,clinique,23.0,,blush,5
+93,clinique,23.0,,blush,10
+94,clinique,18.9,,blush,7
+95,clinique,23.0,,blush,10
+96,clinique,23.0,,blush,9
+97,clinique,,,blush,7
+98,clinique,23.0,,blush,9
+99,dior,32.0,,blush,8
+100,dior,0.0,,blush,2
+101,dior,32.5,,blush,1
+102,dior,32.5,,blush,7
+103,dior,27.5,,blush,7
+104,iman,,,blush,8
+105,smashbox,29.0,,blush,5
+106,smashbox,35.0,,blush,3
+107,smashbox,29.0,,blush,8
+108,,15.99,5.0,blush,6
+109,nyx,12.99,,blush,3
+110,covergirl,13.99,,blush,1
+111,cargo cosmetics,32.0,,blush,3
+112,,28.96,,blush,5
+113,maybelline,14.99,,blush,3
+114,sante,23.49,3.0,blush,1
+115,covergirl,13.99,5.0,blush,5
+116,annabelle,7.99,,blush,10
+117,nyx,7.99,4.0,blush,7
+118,cargo cosmetics,29.0,5.0,blush,7
+119,mineral fusion,32.0,5.0,blush,9
+120,covergirl,8.99,5.0,blush,10
+121,covergirl,8.99,,blush,10
+122,physicians formula,15.99,4.0,blush,3
+123,covergirl,6.99,5.0,blush,7
+124,e.l.f.,9.99,,blush,1
+125,revlon,13.49,5.0,blush,4
+126,maybelline,14.99,5.0,blush,4
+127,physicians formula,15.99,4.0,blush,5
+128,covergirl,6.99,5.0,blush,7
+129,almay,14.49,4.0,blush,7
+130,l'oreal,16.49,4.8,blush,4
+131,physicians formula,15.99,4.7,blush,7
+132,pure anada,12.0,4.0,blush,3
+133,physicians formula,15.49,4.8,blush,6
+134,covergirl,7.99,3.3,blush,2
+135,physicians formula,19.99,4.8,blush,10
+136,e.l.f.,9.99,4.7,blush,9
+137,pure anada,12.0,4.5,blush,5
+138,maybelline,10.29,4.8,blush,6
+139,pure anada,12.0,4.4,blush,4
+140,milani,9.99,4.6,blush,10
+141,milani,7.99,4.7,blush,7
+142,cargo cosmetics,26.0,4.8,blush,9
+143,physicians formula,15.99,5.0,blush,7
+144,stila,51.0,,blush,1
+145,stila,51.0,,blush,1
+146,anna sui,27.0,,blush,9
+147,nyx,9.99,2.0,blush,9
+148,l'oreal,15.99,,blush,4
+149,marcelle,14.99,5.0,blush,9
+150,revlon,13.49,5.0,blush,3
+151,,15.0,2.3,blush,7
+152,physicians formula,8.99,4.0,blush,6
+153,maybelline,11.99,4.5,blush,8
+154,physicians formula,29.99,4.8,blush,9
+155,pacifica,28.0,3.6,blush,5
+156,maia's mineral galaxy,0.0,,eyebrow,1
+157,nyx,9.75,,eyebrow,3
+158,nyx,15.0,,eyebrow,10
+159,nyx,10.0,,eyebrow,8
+160,nyx,10.0,,eyebrow,6
+161,nyx,8.75,,eyebrow,8
+162,nyx,8.0,,eyebrow,9
+163,nyx,13.0,,eyebrow,4
+164,nyx,7.0,,eyebrow,1
+165,nyx,6.5,,eyebrow,1
+166,nyx,10.0,,eyebrow,10
+167,nyx,10.0,,eyebrow,4
+168,nyx,6.0,,eyebrow,7
+169,nyx,6.0,,eyebrow,2
+170,nyx,7.0,,eyebrow,3
+171,nyx,4.75,,eyebrow,1
+172,nyx,7.0,,eyebrow,5
+173,nyx,7.0,,eyebrow,1
+174,nyx,10.0,,eyebrow,8
+175,clinique,9.0,,eyebrow,1
+176,clinique,18.0,,eyebrow,1
+177,clinique,34.5,,eyebrow,2
+178,clinique,18.0,,eyebrow,2
+179,clinique,18.0,,eyebrow,6
+180,clinique,18.0,,eyebrow,7
+181,dior,43.0,,eyebrow,5
+182,dior,20.0,,eyebrow,1
+183,dior,20.0,,eyebrow,1
+184,dior,22.0,,eyebrow,3
+185,dior,22.0,,eyebrow,2
+186,iman,,,eyebrow,5
+187,benefit,29.0,,eyebrow,10
+188,benefit,29.0,,eyebrow,6
+189,benefit,42.0,,eyebrow,7
+190,benefit,36.0,,eyebrow,4
+191,benefit,30.0,,eyebrow,7
+192,benefit,30.0,,eyebrow,8
+193,benefit,30.0,,eyebrow,1
+194,benefit,30.0,,eyebrow,6
+195,benefit,44.0,,eyebrow,8
+196,benefit,44.0,,eyebrow,5
+197,benefit,44.0,,eyebrow,4
+198,smashbox,21.0,,eyebrow,2
+199,smashbox,21.0,,eyebrow,6
+200,smashbox,21.0,,eyebrow,6
+201,smashbox,25.0,,eyebrow,1
+202,smashbox,28.0,,eyebrow,9
+203,smashbox,55.0,,eyebrow,6
+204,smashbox,49.0,,eyebrow,3
+205,zorah biocosmetiques,0.0,,eyeliner,4
+206,marienatie,0.0,,eyeliner,4
+207,marienatie,0.0,,eyeliner,3
+208,c'est moi,0.0,,eyeliner,10
+209,nyx,11.0,,eyeliner,3
+210,nyx,8.0,,eyeliner,3
+211,nyx,10.0,,eyeliner,4
+212,nyx,10.0,,eyeliner,7
+213,nyx,9.0,,eyeliner,4
+214,nyx,8.0,,eyeliner,9
+215,nyx,12.0,,eyeliner,1
+216,nyx,8.0,,eyeliner,8
+217,nyx,8.0,,eyeliner,7
+218,nyx,6.0,,eyeliner,2
+219,nyx,4.0,,eyeliner,8
+220,nyx,5.0,,eyeliner,1
+221,nyx,8.0,,eyeliner,9
+222,nyx,4.5,,eyeliner,9
+223,nyx,10.0,,eyeliner,2
+224,nyx,7.0,,eyeliner,7
+225,nyx,6.0,,eyeliner,10
+226,nyx,10.0,,eyeliner,3
+227,nyx,9.5,,eyeliner,7
+228,nyx,9.5,,eyeliner,10
+229,nyx,15.0,,eyeliner,9
+230,nyx,10.0,,eyeliner,4
+231,nyx,7.0,,eyeliner,1
+232,nyx,10.0,,eyeliner,2
+233,nyx,7.0,,eyeliner,1
+234,nyx,4.5,,eyeliner,5
+235,nyx,8.0,,eyeliner,5
+236,nyx,5.5,,eyeliner,7
+237,nyx,7.0,,eyeliner,9
+238,nyx,7.0,,eyeliner,9
+239,nyx,4.5,,eyeliner,3
+240,fenty,20.0,,eyeliner,3
+241,clinique,17.5,,eyeliner,3
+242,clinique,17.5,,eyeliner,4
+243,clinique,17.5,,eyeliner,8
+244,clinique,17.5,,eyeliner,6
+245,clinique,17.5,,eyeliner,8
+246,clinique,17.5,,eyeliner,1
+247,clinique,17.5,,eyeliner,8
+248,clinique,17.0,,eyeliner,4
+249,clinique,21.0,,eyeliner,1
+250,dior,27.5,,eyeliner,8
+251,dior,27.0,,eyeliner,4
+252,dior,26.5,,eyeliner,6
+253,dior,20.0,,eyeliner,8
+254,dior,19.5,,eyeliner,4
+255,dior,20.5,,eyeliner,3
+256,iman,,,eyeliner,9
+257,benefit,26.0,,eyeliner,3
+258,benefit,26.0,,eyeliner,9
+259,benefit,31.0,,eyeliner,2
+260,smashbox,22.0,,eyeliner,2
+261,smashbox,24.0,,eyeliner,2
+262,smashbox,19.0,,eyeliner,6
+263,smashbox,22.0,,eyeliner,3
+264,smashbox,20.0,,eyeliner,9
+265,smashbox,21.0,,eyeliner,4
+266,covergirl,11.99,,eyeliner,1
+267,anna sui,28.0,,eyeliner,4
+268,anna sui,10.0,,eyeliner,1
+269,covergirl,9.49,3.0,eyeliner,5
+270,anna sui,26.0,,eyeliner,4
+271,covergirl,11.99,,eyeliner,8
+272,revlon,11.49,,eyeliner,8
+273,physicians formula,15.99,,eyeliner,7
+274,covergirl,14.99,,eyeliner,3
+275,l'oreal,12.99,2.5,eyeliner,1
+276,physicians formula,14.79,,eyeliner,1
+277,milani,8.99,5.0,eyeliner,3
+278,annabelle,9.99,5.0,eyeliner,6
+279,cargo cosmetics,19.0,4.7,eyeliner,7
+280,annabelle,8.99,5.0,eyeliner,6
+281,mineral fusion,19.0,4.5,eyeliner,6
+282,wet n wild,1.99,5.0,eyeliner,6
+283,covergirl,6.99,,eyeliner,3
+284,annabelle,9.99,,eyeliner,6
+285,pacifica,16.0,5.0,eyeliner,8
+286,covergirl,9.99,4.5,eyeliner,2
+287,annabelle,6.99,4.8,eyeliner,5
+288,marcelle,10.99,3.0,eyeliner,1
+289,physicians formula,14.79,5.0,eyeliner,1
+290,l'oreal,11.99,5.0,eyeliner,5
+291,l'oreal,10.99,4.3,eyeliner,3
+292,covergirl,6.99,2.5,eyeliner,4
+293,physicians formula,14.79,5.0,eyeliner,3
+294,covergirl,7.49,4.0,eyeliner,1
+295,milani,6.99,3.3,eyeliner,1
+296,l'oreal,12.99,3.5,eyeliner,5
+297,sante,17.29,3.9,eyeliner,6
+298,dr. hauschka,24.0,4.4,eyeliner,3
+299,maybelline,7.29,4.5,eyeliner,9
+300,almay,10.99,4.3,eyeliner,5
+301,maybelline,8.99,4.3,eyeliner,8
+302,pure anada,14.0,4.0,eyeliner,1
+303,l'oreal,9.29,4.5,eyeliner,5
+304,,18.0,3.4,eyeliner,3
+305,revlon,11.49,4.7,eyeliner,1
+306,maybelline,5.99,,eyeliner,4
+307,stila,36.0,,eyeliner,5
+308,nyx,11.99,,eyeliner,7
+309,covergirl,9.49,,eyeliner,1
+310,maybelline,11.99,,eyeliner,3
+311,covergirl,9.99,,eyeliner,2
+312,l'oreal,13.99,,eyeliner,9
+313,milani,10.99,,eyeliner,10
+314,cargo cosmetics,22.0,,eyeliner,6
+315,wet n wild,6.99,,eyeliner,10
+316,,15.99,,eyeliner,3
+317,annabelle,10.99,,eyeliner,8
+318,annabelle,8.96,,eyeliner,8
+319,wet n wild,6.99,4.0,eyeliner,2
+320,marcelle,14.99,,eyeliner,6
+321,annabelle,10.99,5.0,eyeliner,7
+322,covergirl,6.99,,eyeliner,2
+323,marcelle,11.99,5.0,eyeliner,10
+324,wet n wild,6.99,,eyeliner,2
+325,milani,10.99,,eyeliner,10
+326,marcelle,13.99,,eyeliner,1
+327,physicians formula,12.99,,eyeliner,8
+328,physicians formula,12.99,3.7,eyeliner,1
+329,wet n wild,5.49,,eyeliner,9
+330,revlon,11.99,,eyeliner,6
+331,physicians formula,14.79,5.0,eyeliner,7
+332,zorah,24.0,3.3,eyeliner,10
+333,milani,9.99,,eyeliner,7
+334,physicians formula,14.79,5.0,eyeliner,10
+335,suncoat,16.99,3.5,eyeliner,3
+336,dr. hauschka,30.0,4.0,eyeliner,2
+337,almay,10.99,4.2,eyeliner,9
+338,l'oreal,11.99,,eyeliner,8
+339,e.l.f.,3.99,5.0,eyeliner,10
+340,l'oreal,12.99,4.2,eyeliner,7
+341,e.l.f.,4.99,3.7,eyeliner,9
+342,maybelline,11.99,4.0,eyeliner,4
+343,almay,10.99,4.0,eyeliner,4
+344,maybelline,10.29,4.0,eyeliner,1
+345,e.l.f.,4.99,4.3,eyeliner,8
+346,revlon,11.49,4.0,eyeliner,3
+347,l'oreal,10.99,4.3,eyeliner,7
+348,physicians formula,14.79,4.0,eyeliner,2
+349,maybelline,10.99,4.2,eyeliner,2
+350,e.l.f.,4.99,4.5,eyeliner,7
+351,maybelline,11.99,4.4,eyeliner,6
+352,covergirl,7.49,4.3,eyeliner,3
+353,zorah biocosmetiques,0.0,,eyeshadow,9
+354,sally b's skin yummies,0.0,,eyeshadow,10
+355,rejuva minerals,0.0,,eyeshadow,6
+356,rejuva minerals,0.0,,eyeshadow,10
+357,marienatie,0.0,,eyeshadow,10
+358,marienatie,0.0,,eyeshadow,6
+359,lotus cosmetics usa,0.0,,eyeshadow,1
+360,lotus cosmetics usa,0.0,,eyeshadow,4
+361,lotus cosmetics usa,0.0,,eyeshadow,10
+362,lotus cosmetics usa,0.0,,eyeshadow,6
+363,lotus cosmetics usa,0.0,,eyeshadow,6
+364,alva,9.95,,eyeshadow,5
+365,clinique,37.0,,eyeshadow,1
+366,clinique,22.25,,eyeshadow,8
+367,clinique,21.0,,eyeshadow,5
+368,clinique,21.0,,eyeshadow,5
+369,clinique,17.0,,eyeshadow,7
+370,clinique,18.0,,eyeshadow,4
+371,clinique,16.5,,eyeshadow,6
+372,clinique,17.5,,eyeshadow,4
+373,clinique,28.5,,eyeshadow,3
+374,clinique,22.0,,eyeshadow,7
+375,clinique,14.0,,eyeshadow,8
+376,clinique,27.3,,eyeshadow,4
+377,dior,25.5,,eyeshadow,2
+378,dior,65.0,,eyeshadow,10
+379,dior,45.0,,eyeshadow,3
+380,dior,43.0,,eyeshadow,1
+381,dior,45.0,,eyeshadow,8
+382,dior,43.5,,eyeshadow,3
+383,dior,45.0,,eyeshadow,10
+384,dior,25.0,,eyeshadow,7
+385,dior,0.0,,eyeshadow,10
+386,dior,25.5,,eyeshadow,5
+387,dior,22.5,,eyeshadow,10
+388,iman,,,eyeshadow,5
+389,iman,,,eyeshadow,7
+390,smashbox,50.0,,eyeshadow,9
+391,smashbox,25.0,,eyeshadow,5
+392,smashbox,52.0,,eyeshadow,1
+393,smashbox,25.0,,eyeshadow,10
+394,smashbox,49.0,,eyeshadow,10
+395,smashbox,28.0,,eyeshadow,1
+396,smashbox,18.0,,eyeshadow,2
+397,almay,10.49,4.0,eyeshadow,6
+398,covergirl,12.99,5.0,eyeshadow,9
+399,e.l.f.,6.99,,eyeshadow,8
+400,l'oreal,29.99,4.0,eyeshadow,5
+401,dr. hauschka,22.0,5.0,eyeshadow,1
+402,maybelline,8.99,4.0,eyeshadow,7
+403,sante,24.49,5.0,eyeshadow,5
+404,maybelline,10.99,3.0,eyeshadow,6
+405,physicians formula,15.79,4.5,eyeshadow,7
+406,wet n wild,4.79,5.0,eyeshadow,3
+407,e.l.f.,9.99,4.0,eyeshadow,10
+408,milani,12.99,5.0,eyeshadow,3
+409,almay,10.99,4.5,eyeshadow,5
+410,physicians formula,15.49,5.0,eyeshadow,6
+411,covergirl,4.49,5.0,eyeshadow,9
+412,covergirl,6.49,4.0,eyeshadow,5
+413,revlon,14.49,5.0,eyeshadow,1
+414,nyx,5.99,5.0,eyeshadow,4
+415,maybelline,17.99,2.0,eyeshadow,5
+416,pacifica,14.0,4.3,eyeshadow,10
+417,e.l.f.,11.99,4.4,eyeshadow,10
+418,e.l.f.,6.99,5.0,eyeshadow,5
+419,maybelline,8.99,4.3,eyeshadow,7
+420,dr. hauschka,43.0,4.8,eyeshadow,4
+421,covergirl,6.49,4.6,eyeshadow,1
+422,pacifica,28.0,4.9,eyeshadow,5
+423,mistura,56.49,2.6,eyeshadow,7
+424,maybelline,17.99,4.5,eyeshadow,10
+425,covergirl,6.49,4.0,eyeshadow,10
+426,e.l.f.,13.99,4.8,eyeshadow,6
+427,pacifica,28.0,4.6,eyeshadow,5
+428,wet n wild,4.99,4.2,eyeshadow,4
+429,pure anada,8.0,4.5,eyeshadow,2
+430,wet n wild,1.99,4.6,eyeshadow,4
+431,maybelline,8.99,4.5,eyeshadow,10
+432,physicians formula,10.49,4.6,eyeshadow,10
+433,cargo cosmetics,19.0,5.0,eyeshadow,3
+434,pure anada,8.0,4.5,eyeshadow,10
+435,maybelline,8.99,4.0,eyeshadow,1
+436,marcelle,13.99,,eyeshadow,8
+437,pacifica,27.96,3.0,eyeshadow,5
+438,e.l.f.,4.99,5.0,eyeshadow,4
+439,colourpop,12.0,,foundation,8
+440,deciem,6.7,,foundation,7
+441,deciem,6.9,,foundation,2
+442,w3llpeople,0.0,,foundation,1
+443,rejuva minerals,0.0,,foundation,4
+444,marienatie,0.0,,foundation,8
+445,glossier,22.0,,foundation,2
+446,glossier,27.0,,foundation,3
+447,glossier,27.0,,foundation,1
+448,glossier,32.0,,foundation,1
+449,nyx,10.0,,foundation,3
+450,nyx,12.0,,foundation,5
+451,nyx,12.0,,foundation,3
+452,nyx,12.0,,foundation,1
+453,nyx,10.0,,foundation,1
+454,nyx,3.5,,foundation,8
+455,nyx,5.0,,foundation,10
+456,nyx,9.0,,foundation,2
+457,nyx,10.0,,foundation,3
+458,nyx,10.0,,foundation,2
+459,nyx,10.0,,foundation,3
+460,nyx,7.0,,foundation,7
+461,nyx,12.0,,foundation,1
+462,nyx,6.0,,foundation,10
+463,nyx,6.0,,foundation,8
+464,nyx,12.0,,foundation,10
+465,nyx,5.0,,foundation,10
+466,nyx,5.0,,foundation,10
+467,nyx,10.0,,foundation,2
+468,nyx,12.0,,foundation,3
+469,nyx,13.0,,foundation,9
+470,nyx,12.0,,foundation,7
+471,nyx,10.0,,foundation,4
+472,nyx,7.5,,foundation,10
+473,nyx,9.5,,foundation,5
+474,nyx,18.0,,foundation,2
+475,nyx,10.0,,foundation,8
+476,nyx,10.0,,foundation,4
+477,nyx,14.0,,foundation,9
+478,fenty,25.0,,foundation,5
+479,clinique,32.0,,foundation,9
+480,clinique,28.0,,foundation,4
+481,clinique,26.0,,foundation,10
+482,clinique,36.0,,foundation,5
+483,clinique,28.0,,foundation,9
+484,clinique,25.0,,foundation,8
+485,clinique,17.5,,foundation,3
+486,clinique,24.0,,foundation,1
+487,clinique,28.0,,foundation,3
+488,clinique,28.0,,foundation,4
+489,clinique,28.0,,foundation,2
+490,clinique,26.0,,foundation,1
+491,clinique,26.0,,foundation,7
+492,clinique,26.0,,foundation,8
+493,clinique,28.0,,foundation,7
+494,clinique,28.0,,foundation,5
+495,clinique,29.5,,foundation,1
+496,clinique,28.0,,foundation,7
+497,clinique,33.0,,foundation,7
+498,clinique,28.0,,foundation,9
+499,clinique,18.0,,foundation,3
+500,clinique,20.0,,foundation,9
+501,clinique,20.0,,foundation,1
+502,clinique,20.0,,foundation,1
+503,clinique,22.0,,foundation,4
+504,clinique,26.0,,foundation,9
+505,clinique,19.5,,foundation,6
+506,clinique,39.0,,foundation,3
+507,clinique,39.0,,foundation,1
+508,clinique,38.5,,foundation,4
+509,clinique,25.0,,foundation,9
+510,clinique,23.0,,foundation,3
+511,clinique,23.0,,foundation,9
+512,clinique,39.0,,foundation,7
+513,fenty,34.0,,foundation,4
+514,dior,39.5,,foundation,3
+515,dior,36.5,,foundation,10
+516,dior,36.5,,foundation,5
+517,dior,40.0,,foundation,5
+518,dior,36.5,,foundation,3
+519,dior,23.5,,foundation,9
+520,dior,21.0,,foundation,4
+521,dior,23.5,,foundation,5
+522,dior,29.0,,foundation,4
+523,iman,,,foundation,5
+524,iman,,,foundation,7
+525,iman,,,foundation,9
+526,iman,,,foundation,7
+527,benefit,39.0,,foundation,5
+528,benefit,44.0,,foundation,10
+529,smashbox,25.0,,foundation,10
+530,smashbox,25.0,,foundation,7
+531,smashbox,42.0,,foundation,10
+532,smashbox,49.0,,foundation,5
+533,smashbox,45.0,,foundation,3
+534,smashbox,42.0,,foundation,7
+535,smashbox,39.0,,foundation,2
+536,smashbox,42.0,,foundation,9
+537,smashbox,42.0,,foundation,10
+538,marcelle,17.99,,foundation,10
+539,revlon,19.99,,foundation,1
+540,marcelle,22.99,5.0,foundation,6
+541,physicians formula,12.99,2.5,foundation,7
+542,physicians formula,12.99,4.0,foundation,8
+543,covergirl,15.99,5.0,foundation,10
+544,sante,27.49,3.8,foundation,9
+545,covergirl,9.99,5.0,foundation,2
+546,revlon,19.99,4.4,foundation,10
+547,maybelline,14.79,3.8,foundation,2
+548,revlon,18.29,4.2,foundation,5
+549,maybelline,10.99,4.7,foundation,5
+550,maybelline,14.79,4.4,foundation,6
+551,e.l.f.,9.99,4.8,foundation,3
+552,mineral fusion,37.0,,foundation,8
+553,pure anada,25.99,,foundation,1
+554,dr. hauschka,35.0,,foundation,6
+555,physicians formula,20.49,4.0,foundation,4
+556,nyx,11.99,5.0,foundation,1
+557,nyx,10.99,,foundation,7
+558,milani,10.99,4.4,foundation,9
+559,physicians formula,29.99,4.7,foundation,4
+560,physicians formula,19.99,4.7,foundation,4
+561,pure anada,19.0,4.3,foundation,6
+562,maybelline,14.99,3.9,foundation,3
+563,physicians formula,14.99,4.6,foundation,6
+564,pure anada,12.0,3.9,foundation,7
+565,covergirl,12.49,,foundation,10
+566,mineral fusion,37.0,4.0,foundation,10
+567,maybelline,18.49,2.5,foundation,3
+568,maybelline,14.99,3.0,foundation,7
+569,nyx,10.99,4.0,foundation,3
+570,l'oreal,16.99,3.0,foundation,2
+571,covergirl,8.99,2.0,foundation,10
+572,covergirl,12.49,,foundation,4
+573,,44.0,4.0,foundation,8
+574,l'oreal,18.99,,foundation,9
+575,covergirl,9.49,5.0,foundation,7
+576,cargo cosmetics,42.0,,foundation,1
+577,covergirl,8.99,,foundation,3
+578,covergirl,9.49,4.0,foundation,9
+579,physicians formula,18.49,4.5,foundation,1
+580,maybelline,14.99,,foundation,9
+581,covergirl,12.49,5.0,foundation,8
+582,revlon,19.99,,foundation,1
+583,revlon,19.99,4.5,foundation,6
+584,l'oreal,26.99,4.0,foundation,5
+585,cargo cosmetics,28.0,5.0,foundation,6
+586,physicians formula,18.49,4.7,foundation,10
+587,annabelle,10.99,5.0,foundation,5
+588,almay,17.29,4.5,foundation,6
+589,l'oreal,20.49,4.3,foundation,5
+590,almay,17.29,4.2,foundation,5
+591,almay,17.29,4.5,foundation,4
+592,covergirl,12.49,4.0,foundation,3
+593,l'oreal,20.99,5.0,foundation,3
+594,l'oreal,19.99,4.3,foundation,4
+595,revlon,19.99,4.6,foundation,9
+596,dr. hauschka,39.0,4.7,foundation,2
+597,e.l.f.,9.99,4.0,foundation,9
+598,maybelline,14.79,4.4,foundation,1
+599,maybelline,10.99,4.4,foundation,1
+600,revlon,19.99,3.8,foundation,5
+601,l'oreal,18.79,4.1,foundation,6
+602,maybelline,10.99,3.8,foundation,6
+603,pure anada,25.0,4.1,foundation,3
+604,e.l.f.,4.99,3.8,foundation,7
+605,colourpop,5.5,,lipstick,9
+606,colourpop,5.5,,lipstick,10
+607,boosh,26.0,,lipstick,8
+608,sally b's skin yummies,0.0,,lipstick,6
+609,penny lane organics,0.0,,lipstick,8
+610,nudus,0.0,,lipstick,5
+611,marienatie,0.0,,lipstick,8
+612,marienatie,0.0,,lipstick,10
+613,coastal classic creation,0.0,,lipstick,4
+614,c'est moi,0.0,,lipstick,10
+615,glossier,20.0,,lipstick,8
+616,nyx,7.0,,lipstick,10
+617,nyx,6.0,,lipstick,2
+618,nyx,6.5,,lipstick,5
+619,nyx,6.5,,lipstick,9
+620,nyx,6.5,,lipstick,4
+621,nyx,6.5,,lipstick,6
+622,nyx,9.0,,lipstick,1
+623,nyx,6.5,,lipstick,9
+624,nyx,6.5,,lipstick,1
+625,nyx,9.0,,lipstick,5
+626,nyx,9.0,,lipstick,4
+627,nyx,9.0,,lipstick,3
+628,nyx,9.0,,lipstick,6
+629,nyx,9.0,,lipstick,2
+630,nyx,6.5,,lipstick,3
+631,nyx,0.0,,lipstick,5
+632,nyx,6.0,,lipstick,9
+633,nyx,12.0,,lipstick,2
+634,nyx,7.0,,lipstick,10
+635,nyx,7.0,,lipstick,8
+636,nyx,7.0,,lipstick,2
+637,nyx,6.5,,lipstick,5
+638,nyx,8.0,,lipstick,7
+639,nyx,9.0,,lipstick,8
+640,nyx,8.5,,lipstick,1
+641,nyx,7.0,,lipstick,6
+642,nyx,7.5,,lipstick,1
+643,nyx,7.0,,lipstick,2
+644,nyx,8.0,,lipstick,1
+645,nyx,8.0,,lipstick,5
+646,nyx,7.0,,lipstick,10
+647,nyx,7.5,,lipstick,9
+648,nyx,7.0,,lipstick,6
+649,nyx,7.0,,lipstick,1
+650,nyx,6.5,,lipstick,1
+651,nyx,7.0,,lipstick,2
+652,fenty,18.0,,lipstick,9
+653,fenty,19.0,,lipstick,3
+654,clinique,17.5,,lipstick,1
+655,clinique,17.5,,lipstick,5
+656,clinique,8.5,,lipstick,7
+657,clinique,17.5,,lipstick,6
+658,clinique,17.0,,lipstick,1
+659,clinique,17.5,,lipstick,5
+660,clinique,17.0,,lipstick,5
+661,clinique,18.5,,lipstick,6
+662,clinique,17.5,,lipstick,3
+663,clinique,15.4,,lipstick,5
+664,clinique,17.5,,lipstick,7
+665,clinique,18.5,,lipstick,5
+666,clinique,18.5,,lipstick,5
+667,clinique,17.5,,lipstick,5
+668,clinique,18.5,,lipstick,10
+669,clinique,18.5,,lipstick,10
+670,clinique,19.5,,lipstick,3
+671,dior,25.0,,lipstick,1
+672,dior,24.0,,lipstick,5
+673,dior,27.5,,lipstick,9
+674,dior,29.5,,lipstick,1
+675,dior,29.5,,lipstick,3
+676,dior,27.5,,lipstick,4
+677,dior,27.5,,lipstick,1
+678,dior,27.5,,lipstick,1
+679,dior,25.0,,lipstick,8
+680,dior,29.5,,lipstick,2
+681,dior,77.0,,lipstick,8
+682,dior,27.5,,lipstick,7
+683,dior,27.5,,lipstick,10
+684,dior,27.5,,lipstick,10
+685,dior,26.5,,lipstick,2
+686,iman,,,lipstick,6
+687,benefit,23.0,,lipstick,6
+688,benefit,38.0,,lipstick,3
+689,benefit,19.0,,lipstick,2
+690,benefit,21.0,,lipstick,1
+691,benefit,21.0,,lipstick,6
+692,benefit,21.0,,lipstick,5
+693,benefit,21.0,,lipstick,9
+694,benefit,21.0,,lipstick,1
+695,benefit,21.0,,lipstick,7
+696,benefit,23.0,,lipstick,5
+697,benefit,23.0,,lipstick,5
+698,benefit,23.0,,lipstick,2
+699,benefit,23.0,,lipstick,3
+700,smashbox,24.0,,lipstick,7
+701,smashbox,21.0,,lipstick,6
+702,smashbox,24.0,,lipstick,2
+703,smashbox,21.0,,lipstick,6
+704,smashbox,21.0,,lipstick,2
+705,smashbox,24.0,,lipstick,2
+706,anna sui,26.0,,lipstick,2
+707,revlon,12.99,4.0,lipstick,3
+708,revlon,11.49,4.0,lipstick,2
+709,wet n wild,3.99,4.2,lipstick,4
+710,covergirl,10.99,,lipstick,9
+711,covergirl,12.99,,lipstick,6
+712,butter london,28.96,,lipstick,1
+713,l'oreal,11.49,,lipstick,8
+714,covergirl,10.49,,lipstick,7
+715,covergirl,12.99,5.0,lipstick,10
+716,mineral fusion,12.0,,lipstick,3
+717,dr. hauschka,27.0,5.0,lipstick,1
+718,marcelle,11.99,,lipstick,5
+719,maybelline,12.99,,lipstick,4
+720,revlon,10.99,5.0,lipstick,10
+721,nyx,5.99,4.0,lipstick,8
+722,cargo cosmetics,32.0,4.0,lipstick,1
+723,revlon,11.49,,lipstick,10
+724,cargo cosmetics,24.0,4.8,lipstick,1
+725,l'oreal,10.99,5.0,lipstick,4
+726,nyx,6.99,4.0,lipstick,8
+727,maybelline,9.99,3.0,lipstick,5
+728,dalish,22.0,3.8,lipstick,2
+729,e.l.f.,7.99,4.5,lipstick,6
+730,maybelline,11.99,,lipstick,5
+731,l'oreal,13.96,4.0,lipstick,2
+732,almay,8.99,,lipstick,3
+733,wet n wild,1.99,5.0,lipstick,9
+734,l'oreal,10.99,5.0,lipstick,7
+735,dr. hauschka,34.0,4.9,lipstick,7
+736,revlon,10.99,5.0,lipstick,6
+737,l'oreal,13.99,5.0,lipstick,8
+738,revlon,14.49,3.3,lipstick,4
+739,revlon,10.99,,lipstick,8
+740,l'oreal,10.99,4.7,lipstick,4
+741,maybelline,9.99,4.8,lipstick,8
+742,maybelline,9.99,5.0,lipstick,9
+743,pacifica,21.0,4.3,lipstick,3
+744,burt's bees,9.99,3.7,lipstick,3
+745,maybelline,9.99,5.0,lipstick,2
+746,l'oreal,10.99,4.6,lipstick,10
+747,revlon,11.79,4.5,lipstick,3
+748,revlon,14.49,4.1,lipstick,3
+749,maybelline,9.99,4.2,lipstick,5
+750,nyx,8.99,4.5,lipstick,5
+751,burt's bees,9.99,4.5,lipstick,2
+752,e.l.f.,4.99,4.3,lipstick,10
+753,revlon,11.49,4.9,lipstick,6
+754,milani,6.99,4.7,lipstick,5
+755,milani,6.99,4.4,lipstick,6
+756,revlon,11.49,4.3,lipstick,1
+757,e.l.f.,4.99,4.1,lipstick,5
+758,pure anada,14.0,4.3,lipstick,9
+759,colourpop,5.0,,lip_liner,10
+760,c'est moi,0.0,,lip_liner,2
+761,nyx,7.0,,lip_liner,1
+762,nyx,8.0,,lip_liner,10
+763,nyx,5.0,,lip_liner,9
+764,nyx,4.0,,lip_liner,10
+765,nyx,4.0,,lip_liner,9
+766,nyx,4.5,,lip_liner,9
+767,clinique,17.5,,lip_liner,6
+768,clinique,17.5,,lip_liner,8
+769,nyx,15.99,,lip_liner,1
+770,marcelle,11.99,,lip_liner,10
+771,nyx,15.99,,lip_liner,4
+772,covergirl,9.99,,lip_liner,1
+773,marcelle,10.99,,lip_liner,8
+774,cargo cosmetics,19.0,5.0,lip_liner,1
+775,marcelle,10.99,3.0,lip_liner,3
+776,nyx,9.99,5.0,lip_liner,4
+777,,4.99,4.5,lip_liner,8
+778,l'oreal,11.29,,lip_liner,6
+779,annabelle,9.99,,lip_liner,10
+780,maybelline,8.29,3.5,lip_liner,7
+781,l'oreal,11.99,4.2,lip_liner,8
+782,nyx,4.99,5.0,lip_liner,2
+783,e.l.f.,4.99,3.7,lip_liner,10
+784,revlon,11.49,5.0,lip_liner,8
+785,milani,3.99,4.7,lip_liner,3
+786,sante,20.49,4.4,lip_liner,7
+787,pacifica,16.0,,lip_liner,3
+788,marienatie,0.0,,mascara,7
+789,lotus cosmetics usa,0.0,,mascara,2
+790,green people,0.0,,mascara,10
+791,c'est moi,0.0,,mascara,6
+792,nyx,9.0,,mascara,3
+793,nyx,9.0,,mascara,3
+794,nyx,7.0,,mascara,9
+795,nyx,7.0,,mascara,7
+796,nyx,15.0,,mascara,5
+797,nyx,9.5,,mascara,10
+798,nyx,7.0,,mascara,7
+799,nyx,8.0,,mascara,9
+800,nyx,6.0,,mascara,1
+801,nyx,7.0,,mascara,7
+802,nyx,7.0,,mascara,6
+803,dior,25.5,,mascara,10
+804,dior,25.5,,mascara,9
+805,dior,25.5,,mascara,1
+806,dior,25.5,,mascara,4
+807,dior,25.5,,mascara,9
+808,dior,25.5,,mascara,4
+809,dior,25.5,,mascara,10
+810,dior,25.5,,mascara,3
+811,iman,,,mascara,9
+812,iman,,,mascara,2
+813,iman,,,mascara,4
+814,benefit,26.0,,mascara,6
+815,benefit,16.0,,mascara,2
+816,benefit,26.0,,mascara,8
+817,benefit,31.0,,mascara,8
+818,benefit,31.0,,mascara,1
+819,benefit,31.0,,mascara,3
+820,smashbox,23.0,,mascara,10
+821,smashbox,22.0,,mascara,9
+822,smashbox,22.0,,mascara,5
+823,smashbox,22.0,,mascara,6
+824,smashbox,22.0,,mascara,4
+825,smashbox,22.0,,mascara,10
+826,mineral fusion,19.0,3.4,mascara,2
+827,covergirl,6.99,,mascara,8
+828,covergirl,6.99,,mascara,6
+829,l'oreal,13.49,4.7,mascara,5
+830,zorah,27.0,4.8,mascara,9
+831,covergirl,9.99,4.8,mascara,1
+832,physicians formula,19.99,4.6,mascara,5
+833,l'oreal,13.99,4.5,mascara,6
+834,covergirl,9.99,5.0,mascara,5
+835,almay,10.99,4.3,mascara,6
+836,covergirl,9.99,4.0,mascara,6
+837,covergirl,6.99,5.0,mascara,7
+838,maybelline,12.99,4.5,mascara,4
+839,l'oreal,13.49,,mascara,8
+840,covergirl,6.99,,mascara,7
+841,physicians formula,15.79,3.2,mascara,9
+842,marcelle,10.99,4.5,mascara,7
+843,e.l.f.,4.99,4.0,mascara,3
+844,wet n wild,3.49,5.0,mascara,3
+845,covergirl,9.99,5.0,mascara,8
+846,covergirl,9.99,4.8,mascara,5
+847,covergirl,6.99,4.0,mascara,4
+848,maybelline,10.79,4.4,mascara,8
+849,covergirl,9.99,4.5,mascara,6
+850,almay,10.99,4.3,mascara,2
+851,maybelline,7.79,3.8,mascara,4
+852,physicians formula,15.79,3.1,mascara,4
+853,dr. hauschka,33.0,4.3,mascara,6
+854,e.l.f.,4.99,4.8,mascara,6
+855,l'oreal,13.99,4.8,mascara,1
+856,almay,10.99,4.1,mascara,8
+857,maybelline,7.79,4.0,mascara,6
+858,e.l.f.,4.99,4.3,mascara,3
+859,,24.0,4.1,mascara,9
+860,maybelline,7.79,4.2,mascara,2
+861,l'oreal,14.99,4.6,mascara,8
+862,l'oreal,13.79,4.7,mascara,10
+863,suncoat,16.49,3.4,mascara,3
+864,pacifica,21.0,4.8,mascara,5
+865,physicians formula,15.79,4.0,mascara,6
+866,maybelline,9.79,4.5,mascara,10
+867,l'oreal,9.99,2.5,mascara,6
+868,maybelline,11.49,4.0,mascara,4
+869,maybelline,10.99,,mascara,3
+870,l'oreal,13.29,4.6,mascara,4
+871,maybelline,7.79,4.2,mascara,1
+872,maybelline,10.99,4.0,mascara,4
+873,maybelline,9.79,4.0,mascara,1
+874,covergirl,9.99,4.8,mascara,1
+875,pacifica,28.0,4.2,mascara,10
+876,physicians formula,15.79,3.9,mascara,6
+877,physicians formula,15.79,3.7,mascara,5
+878,,9.99,4.5,mascara,4
+879,pure anada,14.0,4.6,mascara,3
+880,dior,20.0,,nail_polish,1
+881,dior,20.0,,nail_polish,6
+882,dior,20.0,,nail_polish,2
+883,dior,20.0,,nail_polish,8
+884,dior,20.0,,nail_polish,10
+885,dior,20.0,,nail_polish,5
+886,dior,20.0,,nail_polish,7
+887,dior,20.0,,nail_polish,10
+888,dior,20.0,,nail_polish,2
+889,dior,20.5,,nail_polish,8
+890,dior,20.5,,nail_polish,2
+891,dior,20.5,,nail_polish,4
+892,dior,0.0,,nail_polish,1
+893,dior,20.5,,nail_polish,5
+894,moov,14.99,,nail_polish,9
+895,anna sui,15.0,,nail_polish,1
+896,l'oreal,10.99,,nail_polish,9
+897,moov,14.99,2.0,nail_polish,8
+898,l'oreal,10.99,,nail_polish,6
+899,l'oreal,10.99,,nail_polish,7
+900,misa,9.39,5.0,nail_polish,3
+901,l'oreal,10.99,5.0,nail_polish,1
+902,salon perfect,6.99,,nail_polish,5
+903,moov,14.99,3.0,nail_polish,2
+904,l'oreal,10.99,,nail_polish,5
+905,orly,13.49,5.0,nail_polish,8
+906,orly,8.0,,nail_polish,9
+907,orly,13.49,3.0,nail_polish,2
+908,orly,8.0,3.0,nail_polish,3
+909,wet n wild,1.99,5.0,nail_polish,3
+910,maybelline,4.49,3.0,nail_polish,1
+911,maybelline,4.49,4.0,nail_polish,8
+912,pacifica,21.5,5.0,nail_polish,6
+913,l'oreal,7.79,,nail_polish,8
+914,l'oreal,8.99,,nail_polish,9
+915,pacifica,21.5,5.0,nail_polish,5
+916,china glaze,8.0,4.7,nail_polish,3
+917,essie,10.0,5.0,nail_polish,5
+918,revlon,6.99,4.0,nail_polish,5
+919,sante,19.29,4.4,nail_polish,5
+920,pure anada,15.0,5.0,nail_polish,3
+921,l'oreal,7.79,,nail_polish,10
+922,maybelline,4.49,3.3,nail_polish,4
+923,pure anada,15.0,5.0,nail_polish,9
+924,essie,10.0,1.5,nail_polish,10
+925,revlon,6.99,4.8,nail_polish,9
+926,butter london,22.0,5.0,nail_polish,2
+927,suncoat,9.29,3.8,nail_polish,8
+928,essie,10.0,3.4,nail_polish,8
+929,pure anada,10.0,4.8,nail_polish,7
+930,sinful colours,2.99,4.3,nail_polish,8
+931,mineral fusion,10.0,4.0,nail_polish,3
+932,covergirl,5.99,,nail_polish,6
+933,revlon,6.99,4.4,nail_polish,1
+934,essie,10.0,4.3,nail_polish,7
+935,suncoat,22.49,4.0,nail_polish,1
+936,suncoat,22.49,4.0,nail_polish,9
+937,l'oreal,10.99,,nail_polish,1
+938,piggy paint,11.99,4.3,nail_polish,1
+939,suncoat,8.29,3.9,nail_polish,7
