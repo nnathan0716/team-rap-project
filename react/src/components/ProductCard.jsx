@@ -4,11 +4,14 @@ import { useState } from "react";
 const ProductCard = ({ data, cart, setCart }) => {
   const isInCart = cart.includes(data._id);
 
+  const addDefaultImg = ev => {
+        ev.target.src = "../../public/no-image.jpg"
+    }
+
   return (
     <>
       <div className="card">
-        <div className="card bg-light">
-          <img src={data.image_link} alt={"Image of " + data.name}></img>
+          <img className="fallback" src={data.image_link} alt={"Image of " + data.name} onError={addDefaultImg} ></img>
           <Link to={`/product/${data.name}`} state={{ info: data }}>
             {data.name}
           </Link>
@@ -30,7 +33,6 @@ const ProductCard = ({ data, cart, setCart }) => {
               Add to cart!
             </button>
           )}
-        </div>
       </div>
     </>
   );

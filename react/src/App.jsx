@@ -21,7 +21,6 @@ function App() {
                 key={product._id}
               ></ProductCard>
             ))}
-          </div>
         </div>
       ) : (
         <NameDialog />
