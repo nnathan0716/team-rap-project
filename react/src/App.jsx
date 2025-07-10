@@ -14,8 +14,7 @@ function App() {
 
       <h1>Market Masters: Your one stop shop for makeup</h1>
       {hasSignedIn ? (
-        <div className="product-flex">
-          <div className="product-card">
+        <div className="product-cards">
             {products.map((product) => (
               <ProductCard
                 data={product}
@@ -24,7 +23,6 @@ function App() {
                 key={product._id}
               ></ProductCard>
             ))}
-          </div>
         </div>
       ) : (
         <NameDialog setHasSignedIn={setHasSignedIn} />
