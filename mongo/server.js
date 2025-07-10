@@ -10,6 +10,13 @@ let client;
 const dbName = 'store';
 const url = 'mongodb://localhost:27017';
 
+paths = [
+    '/api/by-category/:category', //category == "product_type"
+    '/api/by-name/:searchTerm',
+    '/api/add-user', //body
+    '/api/add-order/:uid',
+]
+
 /*****  MongoDB endpoints *****/
 
 // Endpoint to read and send JSON file content
