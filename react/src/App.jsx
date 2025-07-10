@@ -2,6 +2,9 @@ import { useState, useEffect } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
+import { Link } from 'react-router-dom';
+import ProductCard from "./components/ProductCard";
+import Product from "./components/Product";
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -21,11 +24,14 @@ function App() {
 
   return (
     <>
-      {products.map((product) => (
-        <Link to={`/film/${film.id}`} state={{ info: product }}>
-          {film.title}
-        </Link>
-      ))}
+      <h1>Market Masters: Your one stop shop for makeup</h1>
+      <div className="product-flex">
+        <div className="product-card">
+          {products.map((product) => (
+            <ProductCard data={product}></ProductCard>
+          ))}
+        </div>
+      </div>
     </>
   );
 }
