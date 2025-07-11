@@ -1,4 +1,6 @@
 import { useLocation } from "react-router-dom"
+import "../css/Product.css"
+import "../App.css"
 
 const Product = (props) => {
     const location = useLocation();
@@ -9,16 +11,19 @@ const Product = (props) => {
     
     return (
         <>
+        <div className="product-container">
             <h1>{productData.name}</h1>
-            <p>Price: {productData.price}</p>
-            <img 
-                src={productData.image_link} 
-                alt={`Image of ${productData.name}`}
-                onError={(e) => {
-                    e.target.onerror = null;
-                    e.target.src = "/no-image.jpg";
-                }}
-            />
+                <p>Price: {productData.price}</p>
+                <img 
+                    src={productData.image_link} 
+                    alt={`Image of ${productData.name}`}
+                    onError={(e) => {
+                        e.target.onerror = null;
+                        e.target.src = "/no-image.jpg";
+                    }}
+                />
+        </div>
+            
         </>
     );
 }
