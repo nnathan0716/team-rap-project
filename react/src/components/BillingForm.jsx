@@ -1,7 +1,10 @@
 import React from 'react';
 import '../css/BillingForm.css';
+import { useStoreInfo } from '../hooks/StoreContext';
 
 const BillingForm = () => {
+  const { orders, setOrders } = useStoreInfo();
+
   return (
     <form className="form-container">
       <div>
@@ -10,15 +13,15 @@ const BillingForm = () => {
       </div>
       <div>
         <label>Credit Card Number:</label>
-        <input type="text" name="creditCardNumber" required />
+        <input type="text" name="creditCardNumber" pattern="\d{16}" required title="Please enter a 16-digit credit card number" />
       </div>
       <div>
         <label>Expiration Date:</label>
-        <input type="text" name="expirationDate" placeholder="MM/YY" required />
+        <input type="text" name="expirationDate" placeholder="MM/YY" pattern="\d{2}/\d{2}" required title="Please enter a valid expiration date in MM/YY format" />
       </div>
       <div>
         <label>CVV:</label>
-        <input type="text" name="cvv" required />
+        <input type="text" name="cvv" pattern="\d{3,4}" required title="Please enter a 3 or 4-digit CVV" />
       </div>
       <div>
         <label>Billing Address:</label>
@@ -34,9 +37,9 @@ const BillingForm = () => {
       </div>
       <div>
         <label>Zip Code:</label>
-        <input type="text" name="zipCode" required />
+        <input type="text" name="zipCode" pattern="\d{5}" required title="Please enter a 5-digit zip code" />
       </div>
-      <button type="button">Submit Order</button>
+      <button type="submit">Submit Order</button>
     </form>
   );
 };

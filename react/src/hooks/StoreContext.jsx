@@ -10,6 +10,7 @@ export const StoreProvider = ({ children }) => {
   const [searchProducts, setSearchProducts] = useState([]);
   const [cart, setCart] = useState([]);
   const [orders, setOrders] = useState([]);
+  const [total, setTotal] = useState(0);
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -39,6 +40,8 @@ export const StoreProvider = ({ children }) => {
         setCart,
         orders,
         setOrders,
+        total,
+        setTotal
       }}
     >
       {children}

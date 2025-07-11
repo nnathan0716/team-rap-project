@@ -6,22 +6,24 @@ import "../css/Checkout.css";
 import BillingForm from "./BillingForm";
 
 const Checkout = () => {
-  const { cart, products } = useStoreInfo();
+  const { cart, products, total, setTotal } = useStoreInfo();
   const [savedItems, setSavedItems] = useState(cart);
-  const [total, setTotal] = useState(0);
   const [recommendedItems, setRecommendedItems] = useState([]);
   const [displayRecommended, setDisplayRecommended] = useState(false);
   const [displayBilling, setDisplayBilling] = useState(false);
 
-  useEffect(() => setSavedItems(cart));
+  useEffect(() => setSavedItems(cart), []);
 
   useEffect(() => {
     const getRecommended = async () => {
+
+      // fix so that we send over entire list of products in cart to recommend on
       const item = {
         name: cart[0].name,
         brand: cart[0].brand,
         price: cart[0].price,
       };
+
       try {
         // send over just the first item in the cart
         let recs = await fetch("http://localhost:5000/test_recommendation", {
@@ -66,6 +68,7 @@ const Checkout = () => {
         setSavedItems={setSavedItems}
         setTotal={setTotal}
         setDisplayRecommended={setDisplayRecommended}
+        disableCheckout={displayBilling}
       />
       {displayRecommended && (
         <div className="popup-overlay">

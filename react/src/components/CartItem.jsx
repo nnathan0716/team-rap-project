@@ -5,11 +5,11 @@ const CartItem = ({ item, onRemove, onSaveForLater, onSaveToCart, isInCart }) =>
   const [showSaveForLater, setShowSaveForLater] = useState(true);
 
   const handleRemove = () => {
-    onRemove(item._id);
+    onRemove(item);
   };
 
   const handleSaveForLater = () => {
-    onSaveForLater(item._id);
+    onSaveForLater(item);
     setShowSaveForLater(false);
   };
 

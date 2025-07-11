@@ -68,3 +68,8 @@ h2 {
 .checkout-button:hover {
   background-color: darkgreen; /* Change color on hover */
 }
+
+.checkout-button:disabled {
+  background-color: gray;
+  cursor: not-allowed;
+}

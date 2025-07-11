@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useStoreInfo } from "../hooks/StoreContext";
 
 const ProductCard = ({ data }) => {
-  const { cart, setCart } = useStoreInfo();
+  const { cart, setCart, total, setTotal } = useStoreInfo();
   const isInCart = cart.some((product) => product._id === data._id);
 
   const addDefaultImg = (ev) => {
@@ -12,14 +12,13 @@ const ProductCard = ({ data }) => {
 
   const handleRemove = () => {
     setCart((oldCart) => oldCart.filter((product) => product._id !== data._id));
-    // setSavedItems((oldCart) =>
-    //   oldCart.filter((product) => product._id !== data._id)
-    // );
+    setTotal((old) => old - Number(data.price));
   };
 
   const handleAdd = () => {
     setCart((oldCart) => [...oldCart, data]);
-    // setSavedItems(old => [...old, data])
+    setTotal((old) => old + Number(data.price));
+    console.log("current total: " + total);
   }
 
   return (
