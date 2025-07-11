@@ -13,6 +13,7 @@ import Product from "./components/Product.jsx";
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <StoreProvider>
+      <div className="app-container">
       <BrowserRouter>
         <Navbar />
         <Routes>
@@ -22,6 +23,8 @@ createRoot(document.getElementById("root")).render(
           <Route path="/product/:name" element={<Product />}></Route>
         </Routes>
       </BrowserRouter>
+      </div>
+      
     </StoreProvider>
   </StrictMode>
 );
