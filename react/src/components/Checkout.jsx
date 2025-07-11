@@ -39,7 +39,6 @@ const Checkout = () => {
             (product) => product.name === item.name
           );
          
-          console.log(cart.includes(matchedProduct));
           if (matchedProduct && !cart.find((item) => item._id === matchedProduct._id)) {
             recObjects.push(matchedProduct);
           }
