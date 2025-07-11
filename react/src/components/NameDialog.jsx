@@ -3,7 +3,7 @@ import { useStoreInfo } from "../hooks/StoreContext";
 
 const NameDialog = () => {
   const [inputName, setInputName] = useState("");
-  const { setUser, setCart } = useStoreInfo();
+  const { setUser, setCart, setOrders } = useStoreInfo();
 
   const handleNameSubmit = async () => {
     if (inputName.trim()) {
@@ -28,6 +28,16 @@ const NameDialog = () => {
         setCart(cartData);
       } catch (error) {
         console.error("Error getting cart:", error);
+      }
+
+      try {
+        const res = await fetch(
+          `http://localhost:3000/api/get-orders/${inputName}`
+        );
+        const orderData = await res.json();
+        setOrders(orderData);
+      } catch (error) {
+        console.error("Error getting orders:", error);
       }
     }
   };

@@ -4,6 +4,7 @@ import "./index.css";
 import App from "./App.jsx";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Checkout from "./components/Checkout.jsx";
+import Orders from "./components/Orders.jsx";
 import Navbar from "./components/Navbar.jsx";
 import { StoreProvider } from "./hooks/StoreContext.jsx";
 
@@ -17,6 +18,7 @@ createRoot(document.getElementById("root")).render(
         <Routes>
           <Route path="/" element={<App />}></Route>
           <Route path="/checkout" element={<Checkout />}></Route>
+          <Route path="/orders" element={<Orders />}></Route>
           <Route path="/product/:name" element={<Product />}></Route>
         </Routes>
       </BrowserRouter>

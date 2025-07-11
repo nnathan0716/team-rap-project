@@ -93,7 +93,7 @@ app.post("/api/add-user/:username", async (req, res) => {
         const user = {
           username: username,
           firstLogin: new Date().toISOString(),
-          cart: ['1'],
+          cart: [],
           orders: [],
         };
         await collection.insertOne(user);
@@ -106,6 +106,23 @@ app.post("/api/add-user/:username", async (req, res) => {
     } 
   });
   
+  app.get("/api/get-orders/:username", async (req, res) => {
+    try {
+      const username = req.params.username;
+  
+      client = await MongoClient.connect(url);
+      const db = client.db(dbName);
+      const collection = db.collection("users");
+  
+      const user = await collection.findOne({ username: username });
+      
+      const orders = user.orders;
+      res.json(orders);
+    } catch (err) {
+      console.error("Error:", err);
+      res.status(500).send("Error getting orders");
+    }
+  });
 
 app.patch("/api/add-order/:username", async (req, res) => {
   try {
@@ -129,7 +146,7 @@ app.patch("/api/add-order/:username", async (req, res) => {
     }
   } catch (err) {
     console.error("Error:", err);
-    res.status(500).send("Error adding user");
+    res.status(500).send("Error adding order");
   }
 });
 
@@ -147,14 +164,16 @@ app.get("/api/get-cart/:username", async (req, res) => {
     res.json(cart);
   } catch (err) {
     console.error("Error:", err);
-    res.status(500).send("Error adding user");
+    res.status(500).send("Error getting cart");
   }
 });
 
 app.put("/api/update-cart/:username", async (req, res) => {
   try {
     const username = req.params.username;
-    const newCart = req.body;
+    const newCart = req.body.cart;
+    console.log(newCart);
+    // const newCart = cart.cart;
 
     client = await MongoClient.connect(url);
     const db = client.db(dbName);
@@ -168,7 +187,7 @@ app.put("/api/update-cart/:username", async (req, res) => {
     res.json(newCart);
   } catch (err) {
     console.error("Error:", err);
-    res.status(500).send("Error adding user");
+    res.status(500).send("Error updating cart");
   }
 });
 
