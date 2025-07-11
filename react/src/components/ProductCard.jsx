@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 
 const ProductCard = ({ data, cart, setCart }) => {
-  const isInCart = cart.includes(data._id);
+  const isInCart = cart.some((product) => product._id === data._id);
 
   const addDefaultImg = ev => {
         ev.target.src = "../../public/no-image.jpg"
@@ -20,7 +20,7 @@ const ProductCard = ({ data, cart, setCart }) => {
             <button
               onClick={() =>
                 setCart((oldCart) =>
-                  oldCart.filter((productId) => productId !== data._id)
+                  oldCart.filter((product) => product._id !== data._id)
                 )
               }
             >
@@ -28,7 +28,7 @@ const ProductCard = ({ data, cart, setCart }) => {
             </button>
           ) : (
             <button
-              onClick={() => setCart((oldCart) => [...oldCart, data._id])}
+              onClick={() => setCart((oldCart) => [...oldCart, data])}
             >
               Add to cart!
             </button>
