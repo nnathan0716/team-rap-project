@@ -97,7 +97,7 @@ app.post("/api/add-user/:username", async (req, res) => {
           orders: [],
         };
         await collection.insertOne(user);
-        console.log("success");
+        // console.log("success");
         res.send("Successfully added user");
       }
     } catch (err) {
@@ -128,7 +128,7 @@ app.patch("/api/add-order/:username", async (req, res) => {
   try {
     const username = req.params.username;
     const newOrder = req.body;
-    // console.log(newOrder);
+    console.log(newOrder);
 
     client = await MongoClient.connect(url);
     const db = client.db(dbName);
@@ -161,7 +161,7 @@ app.get("/api/get-cart/:username", async (req, res) => {
     const user = await collection.findOne({ username: username });
     
     const cart = user.cart;
-    console.log(cart);
+    // console.log(cart);
     res.json(cart);
   } catch (err) {
     console.error("Error:", err);
@@ -173,7 +173,7 @@ app.put("/api/update-cart/:username", async (req, res) => {
   try {
     const username = req.params.username;
     const newCart = req.body.cart;
-    console.log(newCart);
+    // console.log(newCart);
     // const newCart = cart.cart;
 
     client = await MongoClient.connect(url);
