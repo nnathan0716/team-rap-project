@@ -1,8 +1,17 @@
-const Checkout = () => {
-    return (
-        <>
-        </>
-    )
-}
+import { useStoreInfo } from "../hooks/StoreContext";
 
-export default Checkout
+const Checkout = () => {
+  const { cart, setCart } = useStoreInfo();
+
+  return (
+    <>
+      <div>
+        {cart.map((item) => (
+          <div key={item}>{item}</div>
+        ))}
+      </div>
+    </>
+  );
+};
+
+export default Checkout;
