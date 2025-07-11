@@ -1,7 +1,14 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-const CartItem = ({ item, onRemove, onSaveForLater, onSaveToCart, isInCart }) => {
+const CartItem = ({
+  item,
+  onRemove,
+  onSaveForLater,
+  onSaveToCart,
+  disableButton,
+  isInCart,
+}) => {
   const [showSaveForLater, setShowSaveForLater] = useState(true);
 
   const handleRemove = () => {
@@ -36,25 +43,39 @@ const CartItem = ({ item, onRemove, onSaveForLater, onSaveToCart, isInCart }) =>
             {item.name}
           </Link>
           <div className="button-group">
-            <button className="btn btn-danger" onClick={handleRemove}>
+            <button
+              className="item-button"
+              onClick={handleRemove}
+              disabled={disableButton}
+            >
               Remove
             </button>
 
             {showSaveForLater ? (
-              <button className="btn btn-secondary" onClick={handleSaveForLater}>
+              <button
+                className="item-button"
+                onClick={handleSaveForLater}
+                disabled={disableButton}
+              >
                 Save for later
               </button>
             ) : (
-              <button className="btn btn-danger" onClick={handleSaveToCart}>
+              <button
+                className="item-button"
+                onClick={handleSaveToCart}
+                disabled={disableButton}
+              >
                 Buy now
               </button>
             )}
           </div>
         </div>
-        <p className="product-price">{new Intl.NumberFormat("en-US", {
+        <p className="product-price">
+          {new Intl.NumberFormat("en-US", {
             style: "currency",
             currency: "USD",
-          }).format(item.price)}</p>
+          }).format(item.price)}
+        </p>
       </div>
     </div>
   );

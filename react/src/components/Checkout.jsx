@@ -7,17 +7,26 @@ import BillingForm from "./BillingForm";
 
 const Checkout = () => {
   const { cart, products, total, setTotal } = useStoreInfo();
-  const [savedItems, setSavedItems] = useState(cart);
+  const [savedItems, setSavedItems] = useState([]);
   const [recommendedItems, setRecommendedItems] = useState([]);
   const [displayRecommended, setDisplayRecommended] = useState(false);
   const [displayBilling, setDisplayBilling] = useState(false);
+  const [purchasedItems, setPurchasedItems] = useState([]);
 
-  useEffect(() => setSavedItems(cart), []);
+  useEffect(() => {
+    // Calculate purchased items whenever cart or savedItems change
+    const calculatePurchasedItems = () => {
+      const purchased = cart.filter(
+        (item) => !savedItems.some((savedItem) => savedItem._id === item._id)
+      );
+      setPurchasedItems(purchased);
+    };
+
+    calculatePurchasedItems();
+  }, [cart, savedItems]);
 
   useEffect(() => {
     const getRecommended = async () => {
-
-      // fix so that we send over entire list of products in cart to recommend on
       const item = {
         name: cart[0].name,
         brand: cart[0].brand,
@@ -25,7 +34,6 @@ const Checkout = () => {
       };
 
       try {
-        // send over just the first item in the cart
         let recs = await fetch("http://localhost:5000/test_recommendation", {
           method: "POST",
           headers: {
@@ -40,8 +48,11 @@ const Checkout = () => {
           const matchedProduct = products.find(
             (product) => product.name === item.name
           );
-         
-          if (matchedProduct && !cart.find((item) => item._id === matchedProduct._id)) {
+
+          if (
+            matchedProduct &&
+            !cart.find((item) => item._id === matchedProduct._id)
+          ) {
             recObjects.push(matchedProduct);
           }
         }
@@ -58,17 +69,16 @@ const Checkout = () => {
   const handleProceedToCheckout = () => {
     setDisplayRecommended(false);
     setDisplayBilling(true);
+    console.log("Proceeding to checkout with items:", purchasedItems);
   };
 
   return (
     <>
       <CartView
-        total={total}
         savedItems={savedItems}
         setSavedItems={setSavedItems}
-        setTotal={setTotal}
         setDisplayRecommended={setDisplayRecommended}
-        disableCheckout={displayBilling}
+        displayBilling={displayBilling}
       />
       {displayRecommended && (
         <div className="popup-overlay">
@@ -87,7 +97,14 @@ const Checkout = () => {
           </div>
         </div>
       )}
-      {displayBilling && <BillingForm />}
+      {displayBilling && (
+        <BillingForm
+          savedItems={savedItems}
+          setSavedItems={setSavedItems}
+          purchasedItems={purchasedItems}
+          setDisplayBilling={setDisplayBilling}
+        />
+      )}
     </>
   );
 };

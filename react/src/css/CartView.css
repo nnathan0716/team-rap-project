@@ -73,3 +73,8 @@ h2 {
   background-color: gray;
   cursor: not-allowed;
 }
+
+.item-button:disabled {
+  background-color: gray;
+  cursor: not-allowed;
+}

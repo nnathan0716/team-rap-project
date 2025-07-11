@@ -4,17 +4,15 @@ import CartItem from "./CartItem";
 import "../css/CartView.css";
 
 const CartView = ({
-  total,
   savedItems,
   setSavedItems,
-  setTotal,
   setDisplayRecommended,
-  disableCheckout
+  displayBilling
 }) => {
-  const { cart, setCart } = useStoreInfo();
+  const { cart, setCart, total, setTotal } = useStoreInfo();
 
   useEffect(() => {
-    setTotal(savedItems.reduce((acc, item) => acc + Number(item.price), 0));
+    setTotal(cart.reduce((acc, item) => acc + Number(item.price), 0));
   }, []);
 
   const isInCart = (itemId) => cart.some((product) => product._id === itemId);
@@ -22,18 +20,18 @@ const CartView = ({
 
   const handleRemove = (toRemove) => {
     setCart((oldCart) => oldCart.filter((item) => item._id !== toRemove._id));
-    setSavedItems((oldItems) => oldItems.filter((item) => item._id !== toRemove._id));
+    // setSavedItems((oldItems) => oldItems.filter((item) => item._id !== toRemove._id));
     setTotal((old) => old - Number(toRemove.price));
   };
 
   const handleSaveToCart = (item) => {
     !isInCart(item._id) && setCart((oldCart) => [...oldCart, item]);
-    !isInSavedItems(item._id) && setSavedItems((oldItems) => [...oldItems, item]);
+    setSavedItems((oldItems) => oldItems.filter(i => i._id !== item._id));
     setTotal((old) => old + Number(item.price));
   };
 
   const handleSaveForLater = (toSave) => {
-    setSavedItems((oldItems) => oldItems.filter((item) => item._id !== toSave._id));
+    setSavedItems((oldItems) => [...oldItems, toSave]);
     setTotal((old) => old - Number(toSave.price));
   };
 
@@ -49,6 +47,7 @@ const CartView = ({
             onSaveForLater={handleSaveForLater}
             onSaveToCart={handleSaveToCart}
             isInCart={isInCart}
+            disableButton={displayBilling}
           />
         ))}
       </div>
@@ -62,7 +61,7 @@ const CartView = ({
       <button
         className="checkout-button"
         onClick={() => setDisplayRecommended(true)}
-        disabled={disableCheckout}
+        disabled={displayBilling}
       >
         Checkout
       </button>
