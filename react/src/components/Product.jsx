@@ -27,10 +27,11 @@ const Product = () => {
                     }}
                 />
             </div>
-            <div className="product-info">
+            <div className="product-information">
                 <h1>{productData.name}</h1>
-                <p>Price: {productData.price}</p>
-                <p>{productData.description}</p>    
+                <h2>Price: {productData.price_sign + productData.price}</h2>
+                <h4>{productData.description}</h4>
+                <h4>Brand: <a href={productData.product_link} target="_blank">{productData.brand}</a></h4>  
                 {isInCart ? (
                 <button
                 onClick={() =>
