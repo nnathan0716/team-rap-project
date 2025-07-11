@@ -31,7 +31,7 @@ def test_recommendation():
         name_vec = tfidf.transform([user_input["name"]]).toarray()
         price_vec = scaler.transform([[user_input["price"]]])
         query_vec = np.hstack([brand_vec, name_vec, price_vec])
-        distances, indices = nn_model.kneighbors(query_vec)
+        distances, indices = nn_model.kneighbors(query_vec, n_neighbors=10)
 
       
         seen_names = set()
