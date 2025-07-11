@@ -3,10 +3,14 @@ import { useStoreInfo } from "../hooks/StoreContext";
 import CartItem from "./CartItem";
 import "../css/CartView.css";
 
-const CartView = () => {
+const CartView = ({
+  total,
+  savedItems,
+  setSavedItems,
+  setTotal,
+  setDisplayRecommended,
+}) => {
   const { cart, setCart } = useStoreInfo();
-  const [savedItems, setSavedItems] = useState(cart);
-  const [total, setTotal] = useState(0);
 
   useEffect(() => {
     setTotal(savedItems.reduce((acc, item) => acc + Number(item.price), 0));
@@ -30,7 +34,7 @@ const CartView = () => {
 
   return (
     <div className="container mt-5">
-      <h2 className="mb-4">Cart</h2>
+      <h2>Shopping Cart</h2>
       <div className="row">
         {cart.map((item) => (
           <CartItem
@@ -43,10 +47,19 @@ const CartView = () => {
           />
         ))}
       </div>
-      <h2>Total: {new Intl.NumberFormat("en-US", {
-            style: "currency",
-            currency: "USD",
-          }).format(total)}</h2>
+      <h2 className="total">
+        Total:{" "}
+        {new Intl.NumberFormat("en-US", {
+          style: "currency",
+          currency: "USD",
+        }).format(total)}
+      </h2>
+      <button
+        className="checkout-button"
+        onClick={() => setDisplayRecommended(true)}
+      >
+        Checkout
+      </button>
     </div>
   );
 };

@@ -1,12 +1,26 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { useStoreInfo } from "../hooks/StoreContext";
 
-const ProductCard = ({ data, cart, setCart }) => {
+const ProductCard = ({ data }) => {
+  const { cart, setCart } = useStoreInfo();
   const isInCart = cart.some((product) => product._id === data._id);
 
   const addDefaultImg = (ev) => {
     ev.target.src = "../../public/no-image.jpg";
   };
+
+  const handleRemove = () => {
+    setCart((oldCart) => oldCart.filter((product) => product._id !== data._id));
+    // setSavedItems((oldCart) =>
+    //   oldCart.filter((product) => product._id !== data._id)
+    // );
+  };
+
+  const handleAdd = () => {
+    setCart((oldCart) => [...oldCart, data]);
+    // setSavedItems(old => [...old, data])
+  }
 
   return (
     <>
@@ -27,17 +41,9 @@ const ProductCard = ({ data, cart, setCart }) => {
           }).format(data.price)}
         </div>
         {isInCart ? (
-          <button
-            onClick={() =>
-              setCart((oldCart) =>
-                oldCart.filter((product) => product._id !== data._id)
-              )
-            }
-          >
-            Remove from cart
-          </button>
+          <button onClick={handleRemove}>Remove from cart</button>
         ) : (
-          <button onClick={() => setCart((oldCart) => [...oldCart, data])}>
+          <button onClick={handleAdd}>
             Add to cart!
           </button>
         )}

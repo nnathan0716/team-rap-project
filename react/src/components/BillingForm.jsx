@@ -1,5 +1,5 @@
 import React from 'react';
-import './BillingForm.css';
+import '../css/BillingForm.css';
 
 const BillingForm = () => {
   return (
