@@ -38,7 +38,9 @@ const Checkout = () => {
           const matchedProduct = products.find(
             (product) => product.name === item.name
           );
-          if (matchedProduct) {
+         
+          console.log(cart.includes(matchedProduct));
+          if (matchedProduct && !cart.find((item) => item._id === matchedProduct._id)) {
             recObjects.push(matchedProduct);
           }
         }
