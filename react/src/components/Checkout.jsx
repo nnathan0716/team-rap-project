@@ -1,15 +1,12 @@
 import { useStoreInfo } from "../hooks/StoreContext";
+import CartView from "./CartView";
 
 const Checkout = () => {
   const { cart, setCart } = useStoreInfo();
 
   return (
     <>
-      <div>
-        {cart.map((item) => (
-          <div key={item}>{item}</div>
-        ))}
-      </div>
+      <CartView />
     </>
   );
 };

@@ -1,13 +1,13 @@
 import { useStoreInfo } from "../hooks/StoreContext";
 import { useState } from "react";
 import ProductSearch from "./ProductSearch";
-import { Link, useNavigate } from "react-router-dom"; // Import useNavigate
-import "../css/Navbar.css"; // Import the CSS file
+import { Link, useNavigate } from "react-router-dom"; 
+import "../css/Navbar.css"; 
 
 // search, view cart, logout
 const Navbar = () => {
   const { user, setUser, cart } = useStoreInfo();
-  const navigate = useNavigate(); // Initialize useNavigate
+  const navigate = useNavigate(); 
 
   const handleClick = async () => {
     // Save user's cart to database
@@ -24,8 +24,8 @@ const Navbar = () => {
     } catch (err) {
       console.error(err);
     }
-    setUser(null); // Set user to null
-    navigate("/"); // Redirect to homepage
+    setUser(null); 
+    navigate("/"); 
   };
 
   return (
