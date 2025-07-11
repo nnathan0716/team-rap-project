@@ -161,6 +161,7 @@ app.get("/api/get-cart/:username", async (req, res) => {
     const user = await collection.findOne({ username: username });
     
     const cart = user.cart;
+    console.log(cart);
     res.json(cart);
   } catch (err) {
     console.error("Error:", err);

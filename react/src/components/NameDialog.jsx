@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useStoreInfo } from "../hooks/StoreContext";
+import "../css/NameDialog.css"; // Import the CSS file
 
 const NameDialog = () => {
   const [inputName, setInputName] = useState("");
@@ -44,12 +45,18 @@ const NameDialog = () => {
 
   return (
     <div className="dialog">
-      <h2>Enter your username</h2>
+      <h2>Username</h2>
       <input
         type="text"
         value={inputName}
         onChange={(e) => setInputName(e.target.value)}
         placeholder="Username"
+      />
+      <h2>Password</h2>
+      <input
+        type="password"
+        
+        placeholder="Password"
       />
       <button onClick={handleNameSubmit}>Submit</button>
     </div>

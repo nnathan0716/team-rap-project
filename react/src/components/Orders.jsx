@@ -2,7 +2,6 @@ import { useStoreInfo } from "../hooks/StoreContext";
 
 const Orders = () => {
   const { orders, setOrders } = useStoreInfo();
-  console.log(orders);
 
   return (
     <div>
