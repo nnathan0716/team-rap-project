@@ -14,9 +14,13 @@ const CartView = ({
   const [displayAlert, setDisplayAlert] = useState(false);
 
   useEffect(() => {
-    console.log(cart);
-    setTotal(cart.reduce((acc, item) => acc + Number(item.price), 0));
-  }, []);
+    // Calculate total excluding saved items
+    const newTotal = cart.reduce(
+      (acc, item) => acc + (isInSavedItems(item._id) ? 0 : Number(item.price)),
+      0
+    );
+    setTotal(newTotal);
+  }, [cart, savedItems]);
 
   const isInCart = (itemId) => cart.some((product) => product._id === itemId);
   const isInSavedItems = (itemId) =>
@@ -24,14 +28,15 @@ const CartView = ({
 
   const handleRemove = (toRemove) => {
     setCart((oldCart) => oldCart.filter((item) => item._id !== toRemove._id));
-    // setSavedItems((oldItems) => oldItems.filter((item) => item._id !== toRemove._id));
     setTotal((old) => old - Number(toRemove.price));
   };
 
   const handleSaveToCart = (item) => {
-    !isInCart(item._id) && setCart((oldCart) => [...oldCart, item]);
-    setSavedItems((oldItems) => oldItems.filter((i) => i._id !== item._id));
-    setTotal((old) => old + Number(item.price));
+    if (!isInCart(item._id)) {
+      setCart((oldCart) => [...oldCart, item]);
+      setSavedItems((oldItems) => oldItems.filter((i) => i._id !== item._id));
+      setTotal((old) => old + Number(item.price));
+    }
   };
 
   const handleSaveForLater = (toSave) => {
@@ -58,7 +63,7 @@ const CartView = ({
             onRemove={handleRemove}
             onSaveForLater={handleSaveForLater}
             onSaveToCart={handleSaveToCart}
-            isSavedForLater={isInSavedItems(item)}
+            showSaveForLater={!isInSavedItems(item._id)}
             disableButton={displayBilling}
           />
         ))}

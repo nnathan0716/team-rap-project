@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
+import { getFallbackImage } from "./getFallbackImage";
 
 const CartItem = ({
   item,
@@ -7,9 +8,8 @@ const CartItem = ({
   onSaveForLater,
   onSaveToCart,
   disableButton,
-  isSavedForLater,
+  showSaveForLater,
 }) => {
-  const [showSaveForLater, setShowSaveForLater] = useState(!isSavedForLater);
 
   const handleRemove = () => {
     onRemove(item);
@@ -17,12 +17,10 @@ const CartItem = ({
 
   const handleSaveForLater = () => {
     onSaveForLater(item);
-    setShowSaveForLater(false);
   };
 
   const handleSaveToCart = () => {
     onSaveToCart(item);
-    setShowSaveForLater(true);
   };
 
   return (
@@ -32,7 +30,7 @@ const CartItem = ({
           src={item.image_link}
           className="product-image"
           alt={"Image of " + item.name}
-          onError={(ev) => (ev.target.src = "../../public/no-image.jpg")}
+          onError={(ev) => (ev.target.src = getFallbackImage(item.product_type))}
         />
         <div className="product-info">
           <Link
