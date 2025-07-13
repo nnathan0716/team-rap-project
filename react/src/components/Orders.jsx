@@ -17,6 +17,8 @@ const Orders = () => {
     }));
   };
 
+  const orders_reversed = [...orders].reverse() // lazy solution lol
+
   return (
     <div className="orders-container">
       {displayAlert && (
@@ -28,12 +30,10 @@ const Orders = () => {
       )}
       <h1>Orders</h1>
       <div className="order-list">
-        {orders.map((order, index) => (
+        {orders_reversed.map((order, index) => ( // change this to orders so it shows up chronologially
           <div className="order-card" key={index}>
             <div className="order-summary" onClick={() => toggleOrderItems(index)}>
               <div className="order-header">
-                
-                  <h3>Order #{index + 1}</h3>
                   <p className="order-date">{new Date(order.date).toDateString()}</p>
                   <p className="product-price">
                     Total: {new Intl.NumberFormat("en-US", {
