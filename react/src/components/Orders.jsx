@@ -14,6 +14,7 @@ const Orders = () => {
         <Alert
           message={"Please sign in to view your orders"}
           onClose={() => setDisplayAlert(false)}
+          type={"bad"}
         />
       )}
       <h1>Orders</h1>

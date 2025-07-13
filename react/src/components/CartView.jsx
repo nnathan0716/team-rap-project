@@ -14,12 +14,8 @@ const CartView = ({
   const [displayAlert, setDisplayAlert] = useState(false);
 
   useEffect(() => {
-    setTotal(
-      cart.reduce(
-        (acc, item) => acc + (!isInSavedItems(item._id) && Number(item.price)),
-        0
-      )
-    );
+    console.log(cart);
+    setTotal(cart.reduce((acc, item) => acc + Number(item.price), 0));
   }, []);
 
   const isInCart = (itemId) => cart.some((product) => product._id === itemId);
@@ -85,6 +81,7 @@ const CartView = ({
         <Alert
           message={"Please sign in before proceeding to checkout"}
           onClose={() => setDisplayAlert(false)}
+          type={"bad"}
         />
       )}
     </div>

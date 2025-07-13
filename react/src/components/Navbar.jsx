@@ -7,13 +7,16 @@ import "../css/Navbar.css";
 
 // search, view cart, logout
 const Navbar = () => {
-  const { user, setUser, cart, setCart } = useStoreInfo();
+  const { user, setUser, cart, setCart, setTotal, setOrders } = useStoreInfo();
   const navigate = useNavigate();
   const [displaySignin, setDisplaySignin] = useState(false);
 
   const handleSignout = async () => {
     setUser(null);
     setTotal(0);
+    setOrders([]);
+    navigate("/");
+
     // Save user's cart to database
     try {
       console.log(cart);
@@ -31,8 +34,6 @@ const Navbar = () => {
 
     // clear cart
     setCart([]);
-    
-    navigate("/");
   };
 
   return (

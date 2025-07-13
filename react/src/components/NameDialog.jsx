@@ -4,7 +4,8 @@ import "../css/NameDialog.css"; // Import the CSS file
 
 const NameDialog = ({setOpen}) => {
   const [inputName, setInputName] = useState("");
-  const { setUser, setCart, setOrders } = useStoreInfo();
+  const { setUser, cart, setCart, setOrders } = useStoreInfo();
+  const isInCart = (data) => cart.some((product) => product._id === data._id);
 
   const handleNameSubmit = async () => {
     if (inputName.trim()) {
@@ -18,8 +19,13 @@ const NameDialog = ({setOpen}) => {
           },
         });
         const userJson = await user.json();
-
-        setCart((oldCart) => Array.from(new Set([...oldCart, ...userJson.cart])));
+        let userCart = [];
+        for (const item of userJson.cart) {
+          if (!isInCart(item)) {
+            userCart.push(item);
+          }
+        }
+        setCart((oldCart) => [...oldCart, ...userCart]);
         setOrders(userJson.orders);
       } catch (error) {
         console.error("Error saving name:", error);

@@ -2,10 +2,12 @@ import { useState } from "react";
 import "../css/BillingForm.css";
 import { useStoreInfo } from "../hooks/StoreContext";
 import { useNavigate } from "react-router-dom";
+import Alert from "./Alert";
 
 const BillingForm = ({ savedItems, setDisplayBilling, purchasedItems }) => {
   const { user, orders, setOrders, setCart, total, setTotal } = useStoreInfo();
   const navigate = useNavigate();
+  const [displayAlert, setDisplayAlert] = useState(false);
 
   const handleSubmitOrder = async (e) => {
     e.preventDefault();
@@ -35,11 +37,9 @@ const BillingForm = ({ savedItems, setDisplayBilling, purchasedItems }) => {
         body: JSON.stringify(order),
       });
 
-      // Display alert message
-      alert("Order success!");
-
-      // Navigate to home page after alert is dismissed
-      navigate("/");
+      setDisplayAlert(true);
+      // Navigate to orders page
+      navigate("/orders");
     } catch (err) {
       console.error(err);
     }
@@ -47,6 +47,19 @@ const BillingForm = ({ savedItems, setDisplayBilling, purchasedItems }) => {
 
   return (
     <div>
+      {displayAlert && (
+        <Alert
+          message={"Order placed successfully!"}
+          onClose={() => setDisplayAlert(false)}
+          type={"good"}
+        />
+      )}
+      <div>
+        <button className="keep-browsing-btn" onClick={() => setDisplayBilling(false)}>
+          Keep browsing
+        </button>
+      </div>
+  
       <form className="form-container" onSubmit={handleSubmitOrder}>
         <div>
           <label>Name on Card:</label>
@@ -105,10 +118,13 @@ const BillingForm = ({ savedItems, setDisplayBilling, purchasedItems }) => {
             title="Please enter a 5-digit zip code"
           />
         </div>
-        <button type="submit">Place Order</button>
+        <div className="button-container">
+          <button type="submit">Place Order</button>
+        </div>
       </form>
     </div>
   );
+  
 };
 
 export default BillingForm;

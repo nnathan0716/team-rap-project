@@ -16,9 +16,10 @@ const ProductCard = ({ data }) => {
   };
 
   const handleAdd = () => {
-    setCart((oldCart) => !isInCart && [...oldCart, data]);
-    setTotal((old) => old + Number(data.price));
-    console.log("current total: " + total);
+    if (!isInCart) {
+      setCart((oldCart) => !isInCart && [...oldCart, data]);
+      setTotal((old) => old + Number(data.price));
+    }
   }
 
   return (
