@@ -4,10 +4,10 @@ import { useStoreInfo } from "../hooks/StoreContext";
 import { useNavigate } from "react-router-dom";
 import Alert from "./Alert";
 
-const BillingForm = ({ savedItems, setDisplayBilling, purchasedItems }) => {
+const BillingForm = ({ savedItems, setDisplayBilling, purchasedItems, setDisplayAlert }) => {
   const { user, orders, setOrders, setCart, total, setTotal } = useStoreInfo();
   const navigate = useNavigate();
-  const [displayAlert, setDisplayAlert] = useState(false);
+  
 
   const handleSubmitOrder = async (e) => {
     e.preventDefault();
@@ -38,8 +38,10 @@ const BillingForm = ({ savedItems, setDisplayBilling, purchasedItems }) => {
       });
 
       setDisplayAlert(true);
-      // Navigate to orders page
-      navigate("/orders");
+      const timer = setTimeout(() => {
+        setDisplayAlert(false); 
+        navigate("/orders");
+      }, 5000); // 5000 milliseconds = 5 seconds
     } catch (err) {
       console.error(err);
     }
@@ -47,19 +49,16 @@ const BillingForm = ({ savedItems, setDisplayBilling, purchasedItems }) => {
 
   return (
     <div>
-      {displayAlert && (
-        <Alert
-          message={"Order placed successfully!"}
-          onClose={() => setDisplayAlert(false)}
-          type={"good"}
-        />
-      )}
+      
       <div>
-        <button className="keep-browsing-btn" onClick={() => setDisplayBilling(false)}>
+        <button
+          className="keep-browsing-btn"
+          onClick={() => setDisplayBilling(false)}
+        >
           Keep browsing
         </button>
       </div>
-  
+
       <form className="form-container" onSubmit={handleSubmitOrder}>
         <div>
           <label>Name on Card:</label>
@@ -70,7 +69,7 @@ const BillingForm = ({ savedItems, setDisplayBilling, purchasedItems }) => {
           <input
             type="text"
             name="creditCardNumber"
-            pattern="\d{16}"
+            // pattern="\d{16}"
             required
             title="Please enter a 16-digit credit card number"
           />
@@ -124,7 +123,6 @@ const BillingForm = ({ savedItems, setDisplayBilling, purchasedItems }) => {
       </form>
     </div>
   );
-  
 };
 
 export default BillingForm;

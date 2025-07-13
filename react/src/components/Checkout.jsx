@@ -4,6 +4,7 @@ import CartView from "./CartView";
 import Recommended from "./Recommended";
 import "../css/Checkout.css";
 import BillingForm from "./BillingForm";
+import Alert from "./Alert";
 
 const Checkout = () => {
   const { cart, products, total, setTotal } = useStoreInfo();
@@ -12,6 +13,7 @@ const Checkout = () => {
   const [displayRecommended, setDisplayRecommended] = useState(false);
   const [displayBilling, setDisplayBilling] = useState(false);
   const [purchasedItems, setPurchasedItems] = useState([]);
+  const [displayAlert, setDisplayAlert] = useState(false);
 
   useEffect(() => {
     // Calculate purchased items whenever cart or savedItems change
@@ -28,10 +30,16 @@ const Checkout = () => {
   useEffect(() => {
     const getRecommended = async () => {
       const item = {
-        name: cart[0].name,
-        brand: cart[0].brand,
-        price: cart[0].price,
+        name: purchasedItems[0].name,
+        brand: purchasedItems[0].brand,
+        price: purchasedItems[0].price,
       };
+
+      const items = cart.map((item) => ({
+        name: item.name,
+        brand: item.brand,
+        price: item.price,
+      }));
 
       try {
         let recs = await fetch("http://localhost:5000/test_recommendation", {
@@ -74,6 +82,13 @@ const Checkout = () => {
 
   return (
     <>
+    {displayAlert && (
+        <Alert
+          message={"Order placed successfully!"}
+          onClose={() => setDisplayAlert(false)}
+          type={"good"}
+        />
+      )}
       <CartView
         savedItems={savedItems}
         setSavedItems={setSavedItems}
@@ -103,6 +118,7 @@ const Checkout = () => {
           setSavedItems={setSavedItems}
           purchasedItems={purchasedItems}
           setDisplayBilling={setDisplayBilling}
+          setDisplayAlert={setDisplayAlert}
         />
       )}
     </>
