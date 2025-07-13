@@ -2,6 +2,7 @@ import { useLocation } from "react-router-dom";
 import "../css/Product.css";
 import "../App.css";
 import { useStoreInfo } from "../hooks/StoreContext";
+import { getFallbackImage } from "./getFallbackImage";
 
 const Product = () => {
   const location = useLocation();
@@ -35,7 +36,7 @@ const Product = () => {
             alt={`Image of ${productData.name}`}
             onError={(e) => {
               e.target.onerror = null;
-              e.target.src = "/no-image.jpg";
+              e.target.src = getFallbackImage(productData.product_type);
             }}
           />
         </div>

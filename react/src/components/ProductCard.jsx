@@ -1,13 +1,14 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useStoreInfo } from "../hooks/StoreContext";
+import { getFallbackImage } from "./getFallbackImage";
 
 const ProductCard = ({ data }) => {
   const { cart, setCart, total, setTotal } = useStoreInfo();
   const isInCart = cart.some((product) => product._id === data._id);
 
   const addDefaultImg = (ev) => {
-    ev.target.src = "../../public/no-image.jpg";
+    ev.target.src = getFallbackImage(data.product_type);
   };
 
   const handleRemove = () => {
