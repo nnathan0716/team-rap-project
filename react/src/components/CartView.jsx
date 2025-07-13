@@ -1,22 +1,30 @@
 import React, { useState, useEffect } from "react";
 import { useStoreInfo } from "../hooks/StoreContext";
 import CartItem from "./CartItem";
+import Alert from "./Alert";
 import "../css/CartView.css";
 
 const CartView = ({
   savedItems,
   setSavedItems,
   setDisplayRecommended,
-  displayBilling
+  displayBilling,
 }) => {
-  const { cart, setCart, total, setTotal } = useStoreInfo();
+  const { user, cart, setCart, total, setTotal } = useStoreInfo();
+  const [displayAlert, setDisplayAlert] = useState(false);
 
   useEffect(() => {
-    setTotal(cart.reduce((acc, item) => acc + Number(item.price), 0));
+    setTotal(
+      cart.reduce(
+        (acc, item) => acc + (!isInSavedItems(item._id) && Number(item.price)),
+        0
+      )
+    );
   }, []);
 
   const isInCart = (itemId) => cart.some((product) => product._id === itemId);
-  const isInSavedItems = (itemId) => savedItems.some((product) => product._id === itemId);
+  const isInSavedItems = (itemId) =>
+    savedItems.some((product) => product._id === itemId);
 
   const handleRemove = (toRemove) => {
     setCart((oldCart) => oldCart.filter((item) => item._id !== toRemove._id));
@@ -26,13 +34,21 @@ const CartView = ({
 
   const handleSaveToCart = (item) => {
     !isInCart(item._id) && setCart((oldCart) => [...oldCart, item]);
-    setSavedItems((oldItems) => oldItems.filter(i => i._id !== item._id));
+    setSavedItems((oldItems) => oldItems.filter((i) => i._id !== item._id));
     setTotal((old) => old + Number(item.price));
   };
 
   const handleSaveForLater = (toSave) => {
     setSavedItems((oldItems) => [...oldItems, toSave]);
     setTotal((old) => old - Number(toSave.price));
+  };
+
+  const handleCheckout = () => {
+    if (user) {
+      setDisplayRecommended(true);
+    } else {
+      setDisplayAlert(true);
+    }
   };
 
   return (
@@ -46,7 +62,7 @@ const CartView = ({
             onRemove={handleRemove}
             onSaveForLater={handleSaveForLater}
             onSaveToCart={handleSaveToCart}
-            isInCart={isInCart}
+            isSavedForLater={isInSavedItems(item)}
             disableButton={displayBilling}
           />
         ))}
@@ -60,11 +76,17 @@ const CartView = ({
       </h2>
       <button
         className="checkout-button"
-        onClick={() => setDisplayRecommended(true)}
-        disabled={displayBilling}
+        onClick={handleCheckout}
+        disabled={displayBilling || total === 0}
       >
         Checkout
       </button>
+      {displayAlert && (
+        <Alert
+          message={"Please sign in before proceeding to checkout"}
+          onClose={() => setDisplayAlert(false)}
+        />
+      )}
     </div>
   );
 };

@@ -1,0 +1,27 @@
+.alert {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40%;
+    background-color: #f44336; /* Red background */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    font-size: 20px; /* Larger font size */
+    font-weight: bold;
+  }
+  
+  .close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+    right: 2%;
+    top: 2%; /* Position at the top right */
+  }
+  

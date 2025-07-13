@@ -7,9 +7,9 @@ const CartItem = ({
   onSaveForLater,
   onSaveToCart,
   disableButton,
-  isInCart,
+  isSavedForLater,
 }) => {
-  const [showSaveForLater, setShowSaveForLater] = useState(true);
+  const [showSaveForLater, setShowSaveForLater] = useState(!isSavedForLater);
 
   const handleRemove = () => {
     onRemove(item);

@@ -88,7 +88,7 @@ app.post("/api/add-user/:username", async (req, res) => {
   
       if (existingUser) {
         // console.log("user already exists");
-        res.send("User already exists, no action taken");
+        res.json(existingUser);
       } else {
         const user = {
           username: username,
@@ -98,13 +98,14 @@ app.post("/api/add-user/:username", async (req, res) => {
         };
         await collection.insertOne(user);
         // console.log("success");
-        res.send("Successfully added user");
+        res.json(user);
       }
     } catch (err) {
       console.error("Error:", err);
       res.status(500).send("Error adding user");
     } 
   });
+
   
   app.get("/api/get-orders/:username", async (req, res) => {
     try {
@@ -117,6 +118,7 @@ app.post("/api/add-user/:username", async (req, res) => {
       const user = await collection.findOne({ username: username });
       
       const orders = user.orders;
+      console.log(orders);
       res.json(orders);
     } catch (err) {
       console.error("Error:", err);

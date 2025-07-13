@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useStoreInfo } from "../hooks/StoreContext";
 import "../css/NameDialog.css"; // Import the CSS file
 
-const NameDialog = () => {
+const NameDialog = ({setOpen}) => {
   const [inputName, setInputName] = useState("");
   const { setUser, setCart, setOrders } = useStoreInfo();
 
@@ -11,35 +11,41 @@ const NameDialog = () => {
       setUser(inputName);
 
       try {
-        await fetch(`http://localhost:3000/api/add-user/${inputName}`, {
+        const user = await fetch(`http://localhost:3000/api/add-user/${inputName}`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
         });
+        const userJson = await user.json();
+
+        setCart((oldCart) => Array.from(new Set([...oldCart, ...userJson.cart])));
+        setOrders(userJson.orders);
       } catch (error) {
         console.error("Error saving name:", error);
       }
 
-      try {
-        const res = await fetch(
-          `http://localhost:3000/api/get-cart/${inputName}`
-        );
-        const cartData = await res.json();
-        setCart(cartData);
-      } catch (error) {
-        console.error("Error getting cart:", error);
-      }
+      // try {
+      //   const res = await fetch(
+      //     `http://localhost:3000/api/get-cart/${inputName}`
+      //   );
+      //   const cartData = await res.json();
+      //   setCart(cartData);
+      // } catch (error) {
+      //   console.error("Error getting cart:", error);
+      // }
 
-      try {
-        const res = await fetch(
-          `http://localhost:3000/api/get-orders/${inputName}`
-        );
-        const orderData = await res.json();
-        setOrders(orderData);
-      } catch (error) {
-        console.error("Error getting orders:", error);
-      }
+      // try {
+      //   const res = await fetch(
+      //     `http://localhost:3000/api/get-orders/${inputName}`
+      //   );
+      //   const orderData = await res.json();
+      //   setOrders(orderData);
+      // } catch (error) {
+      //   console.error("Error getting orders:", error);
+      // }
+
+      setOpen(false);
     }
   };
 

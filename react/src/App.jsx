@@ -10,22 +10,18 @@ function App() {
   return (
     <>
       <h1>Makeup Masters: Your one stop shop for makeup</h1>
-      {user ? (
-        <div className="product-flex">
-          <div className="product-cards">
-            {searchProducts.map((product) => (
-              <ProductCard
-                data={product}
-                cart={cart}
-                setCart={setCart}
-                key={product._id}
-              ></ProductCard>
-            ))}
-          </div>
+      <div className="product-flex">
+        <div className="product-cards">
+          {searchProducts.map((product) => (
+            <ProductCard
+              data={product}
+              cart={cart}
+              setCart={setCart}
+              key={product._id}
+            ></ProductCard>
+          ))}
         </div>
-      ) : (
-        <NameDialog />
-      )}
+      </div>
     </>
   );
 }

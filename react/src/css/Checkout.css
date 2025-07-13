@@ -18,7 +18,7 @@
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   width: 100%; /* Increase the width */
-  max-width: 1200px; /* Increase the max-width */
+  max-width: 1000px; /* Increase the max-width */
   max-height: 80%; /* Limit the height to make it scrollable */
   overflow-y: auto; /* Enable vertical scrolling */
   text-align: center;
