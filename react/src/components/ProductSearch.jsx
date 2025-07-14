@@ -37,6 +37,7 @@ const ProductSearch = () => {
         onChange={handleSearch}
         placeholder="Search products"
       />
+      <button onClick={() => setSearchTerm("")} >Clear</button>
     </div>
   );
 };
