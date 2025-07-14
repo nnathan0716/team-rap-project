@@ -32,11 +32,11 @@ const CartView = ({
   };
 
   const handleSaveToCart = (item) => {
-    if (!isInCart(item._id)) {
-      setCart((oldCart) => [...oldCart, item]);
+    
+      !isInCart(item._id) && setCart((oldCart) => [...oldCart, item]);
       setSavedItems((oldItems) => oldItems.filter((i) => i._id !== item._id));
       setTotal((old) => old + Number(item.price));
-    }
+    
   };
 
   const handleSaveForLater = (toSave) => {
