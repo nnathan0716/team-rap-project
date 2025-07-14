@@ -32,8 +32,7 @@ const CartView = ({
   };
 
   const handleSaveToCart = (item) => {
-    
-      !isInCart(item._id) && setCart((oldCart) => [...oldCart, item]);
+      setCart((oldCart) => [...oldCart, item]);
       setSavedItems((oldItems) => oldItems.filter((i) => i._id !== item._id));
       setTotal((old) => old + Number(item.price));
     
